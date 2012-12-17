@@ -1,7 +1,7 @@
 Boot Start
 ==========
 
-This is a Grails starter project based on the Twitter Bootstrap, Less CSS, and Fields plugins. It also replaces the default scaffolding templates with Bootstrap-based versions to provid a more modern default UI.
+This is a Grails starter project based on the Twitter Bootstrap, Less CSS, and Fields plugins. It also replaces the default scaffolding templates with Bootstrap-based versions to provide a more modern default UI.
 
 Usage
 -----
