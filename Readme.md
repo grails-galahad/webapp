@@ -1,7 +1,7 @@
 Galahad
 =======
 
-Named after Sir Galahad the Pure, this is a pristene Grails starter project based on the Twitter Bootstrap, Less CSS, and Fields plugins.
+Named after Sir Galahad the Pure, this is a pristene Grails starter project based on Twitter Bootstrap and a curated set of plugins.
 
 Usage
 -----
