@@ -16,10 +16,12 @@ grails.mime.types = [ html: ['text/html','application/xhtml+xml'],
                     ]
 
 grails.resources.adhoc.patterns = ['/images/*', '/css/*', '/js/*', '/plugins/*']
+// grails.resources.mappers.csspreprocessor.excludes = ['**/*.less']
+// grails.resources.mappers.cssrewriter.excludes = ['**/*.less']
 grails.views.default.codec = "none" // none, html, base64
 grails.views.gsp.encoding = "UTF-8"
-grails.converters.encoding = "UTF-8"
 grails.views.gsp.sitemesh.preprocess = true
+grails.converters.encoding = "UTF-8"
 grails.scaffolding.templates.domainSuffix = 'Instance'
 grails.json.legacy.builder = false
 grails.enable.native2ascii = true

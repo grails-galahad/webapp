@@ -60,8 +60,6 @@
 						<h2>Install It</h2>
 						<p>To install this look &amp; feel into your Grails app you will need to:</p>
 						<p>Add the following plugins to your <em>BuildConfig.groovy</em>:</p>
-						<pre>runtime ':twitter-bootstrap:${applicationContext.getBean('pluginManager').getGrailsPlugin('twitter-bootstrap').version}'
-runtime ':fields:${applicationContext.getBean('pluginManager').getGrailsPlugin('fields').version}'</pre>
 						<p>Copy the following files to your project:</p>
 						<pre>src/templates/scaffolding/*
 web-app/css/scaffolding.css
