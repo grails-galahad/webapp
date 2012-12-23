@@ -1,6 +1,8 @@
+/*
 body {
 	-webkit-text-size-adjust: none;
 }
+*/
 
 @media (min-width:980px) {
 	body { 
@@ -13,14 +15,6 @@ body {
 }
 
 /* index page */
-
-img#github-ribbon {
-	position: absolute; 
-	top: 0; 
-	right: 0; 
-	border: 0;
-	z-index: 1030; /* no idea where this comes from, lowest value that works */
-}
 
 @media (max-width: 768px) {
 	/* prevent the brand name wrapping or overlapping the menu toggle */

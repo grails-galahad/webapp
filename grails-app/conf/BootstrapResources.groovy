@@ -83,16 +83,4 @@ modules = {
         dependsOn 'jquery'
         dependsOn 'bootstrap-transition, bootstrap-alert, bootstrap-dropdown, bootstrap-modal, bootstrap-scrollspy, bootstrap-tab, bootstrap-tooltip, bootstrap-popover, bootstrap-button, bootstrap-carousel, bootstrap-typeahead, bootstrap-collapse, bootstrap-affix'
     }
-
-    /*
-    'bootstrap-less' {
-        defaultBundle 'monolith'
-        resource id:'bootstrap-less', url:[dir: 'less/bootstrap', file: 'bootstrap.less'], attrs:[rel: "stylesheet/less", type:'css'], disposition: 'head'
-    }
-    
-    bootstrap {
-        defaultBundle 'monolith'
-        dependsOn 'bootstrap-less, bootstrap-js'
-    }
-    */
 }

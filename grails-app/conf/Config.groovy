@@ -16,9 +16,7 @@ grails.mime.types = [ html: ['text/html','application/xhtml+xml'],
                     ]
 
 grails.resources.adhoc.patterns = ['/images/*', '/css/*', '/js/*', '/plugins/*']
-// grails.resources.mappers.csspreprocessor.excludes = ['**/*.less']
-// grails.resources.mappers.cssrewriter.excludes = ['**/*.less']
-grails.views.default.codec = "none" // none, html, base64
+grails.views.default.codec = "none"
 grails.views.gsp.encoding = "UTF-8"
 grails.views.gsp.sitemesh.preprocess = true
 grails.converters.encoding = "UTF-8"
@@ -29,14 +27,6 @@ grails.spring.bean.packages = []
 grails.web.disable.multipart=false
 grails.exceptionresolver.params.exclude = ['password']
 grails.hibernate.cache.queries = true
-
-grails {
-    plugins {
-        twitterbootstrap{
-            defaultBundle = 'monolith'
-        }
-    }
-}
 
 environments {
     development {
