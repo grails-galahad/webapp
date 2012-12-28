@@ -21,7 +21,6 @@ grails.project.dependency.resolution = {
     }
 
     dependencies {
-        // runtime 'mysql:mysql-connector-java:5.1.20'
     }
 
     plugins {
@@ -32,7 +31,6 @@ grails.project.dependency.resolution = {
 		// runtime ":cache-headers:1.1.5"
 		// runtime ":cached-resources:1.0"
 		// runtime ":zipped-resources:1.0"
-		// runtime ":yui-minify-resources:0.1.4"
 		
         build ":tomcat:$grailsVersion"
 		
