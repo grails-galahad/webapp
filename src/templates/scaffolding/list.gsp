@@ -40,11 +40,11 @@
 				<bootstrap:alert class="alert-info">\${flash.message}</bootstrap:alert>
 				</g:if>
 				
-				<table class="table table-striped">
+				<table class="table table-striped table-hover">
 					<thead>
 						<tr>
-						<%  excludedProps = Event.allEvents.toList() << 'id' << 'version'
-							allowedNames = domainClass.persistentProperties*.name << 'dateCreated' << 'lastUpdated'
+						<%  excludedProps = Event.allEvents.toList() << 'id' << 'version' << 'dateCreated' << 'lastUpdated'
+							allowedNames = domainClass.persistentProperties*.name
 							props = domainClass.properties.findAll { allowedNames.contains(it.name) && !excludedProps.contains(it.name) && it.type != null && !Collection.isAssignableFrom(it.type) }
 							Collections.sort(props, comparator.constructors[0].newInstance([domainClass] as Object[]))
 							props.eachWithIndex { p, i ->
@@ -54,24 +54,20 @@
 						<%      } else { %>
 							<g:sortableColumn property="${p.name}" title="\${message(code: '${domainClass.propertyName}.${p.name}.label', default: '${p.naturalName}')}" />
 						<%  }   }   } %>
-							<th></th>
 						</tr>
 					</thead>
 					<tbody>
 					<g:each in="\${${propertyName}List}" var="${propertyName}">
-						<tr>
+						<tr class="clickable">
 						<%  props.eachWithIndex { p, i ->
 						        if (i < 6) {
 									if (p.type == Boolean || p.type == boolean) { %>
-							<td><g:formatBoolean boolean="\${${propertyName}.${p.name}}" /></td>
+							<td><% if (!i) { %><g:link action="show" id="\${${propertyName}.id}"><% } %><g:formatBoolean boolean="\${${propertyName}.${p.name}}" /><% if (!i) { %></g:link><% } %></td>
 						<%          } else if (p.type == Date || p.type == java.sql.Date || p.type == java.sql.Time || p.type == Calendar) { %>
-							<td><g:formatDate date="\${${propertyName}.${p.name}}" /></td>
+							<td><% if (!i) { %><g:link action="show" id="\${${propertyName}.id}"><% } %><g:formatDate date="\${${propertyName}.${p.name}}" /><% if (!i) { %></g:link><% } %></td>
 						<%          } else { %>
-							<td>\${fieldValue(bean: ${propertyName}, field: "${p.name}")}</td>
+							<td><% if (!i) { %><g:link action="show" id="\${${propertyName}.id}"><% } %>\${fieldValue(bean: ${propertyName}, field: "${p.name}")}<% if (!i) { %></g:link><% } %></td>
 						<%  }   }   } %>
-							<td class="link">
-								<g:link action="show" id="\${${propertyName}.id}" class="btn btn-small">Show &raquo;</g:link>
-							</td>
 						</tr>
 					</g:each>
 					</tbody>

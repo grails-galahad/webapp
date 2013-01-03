@@ -1,12 +1,14 @@
 @import "../bootstrap/less/bootstrap.less";
 @import "variables.less";
 
-/* Application styles */
-.navbar .brand {
-    color: #fff;
+/* Mixins */
+.rounded {
+       -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+            border-radius: 8px;
 }
 
-.navbar-inverse .navbar-inner {
+.inverse-gradient {
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#444444), to(#111111));
     background-image: -webkit-linear-gradient(top, #444444, #111111);
     background-image: -o-linear-gradient(top, #444444, #111111);
@@ -14,4 +16,38 @@
     background-image: -moz-linear-gradient(center top, #444444, #111111);
     filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff444444', endColorstr='#ff111111', GradientType=0);
     filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+}
+
+.highlight {
+    background-color: @warningBackground;
+}
+
+/* Scaffolding */
+tr {
+    &.clickable {
+        cursor: pointer;
+        a {
+            color: @textColor;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+dt,
+dd {
+  line-height: @baseLineHeight + 5px;
+}
+
+.navbar {
+    .brand {
+        color: #fff;
+    }
+}
+
+.navbar-inverse {
+    .navbar-inner {
+        .inverse-gradient;
+    }
 }
