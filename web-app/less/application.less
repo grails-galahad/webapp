@@ -22,6 +22,19 @@
     background-color: @warningBackground;
 }
 
+/* Layout */
+.navbar {
+    .brand {
+        color: #fff;
+    }
+}
+
+.navbar-inverse {
+    .navbar-inner {
+        .inverse-gradient;
+    }
+}
+
 /* Scaffolding */
 tr {
     &.clickable {
@@ -40,14 +53,40 @@ dd {
   line-height: @baseLineHeight + 5px;
 }
 
-.navbar {
-    .brand {
-        color: #fff;
+/* Home */
+.billboard {
+    height: 360px;
+    
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 480px;
+        min-width: 100%;
+        z-index: -1;
     }
+    
+    .billboard-caption {
+        background-color: transparent;
+        max-width: 550px;
+        padding: 0 20px;
+        margin-top: 100px;
+        
+        h1, .lead {
+            margin: 0;
+            line-height: 1.25;
+            color: #fff;
+            text-shadow: 0 1px 1px rgba(0,0,0,.4);
+        }
+        
+        h1 {
+            font-size: 5em;
+        }
+    }
+    
+    .btn {
+        margin-top: 10px;
+    }
+    
 }
 
-.navbar-inverse {
-    .navbar-inner {
-        .inverse-gradient;
-    }
-}

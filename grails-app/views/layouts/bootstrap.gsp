@@ -39,7 +39,7 @@
 					
 					<a class="brand" href="${createLink(uri: '/')}">${meta(name: 'app.name')} <sub class="muted">v${meta(name: 'app.version')}</sub></a>
 
-					<div class="nav-collapse">
+					<div class="nav-collapse collapse">
 						<ul class="nav">							
 							<li<%= request.forwardURI == "${createLink(uri: '/')}" ? ' class="active"' : '' %>><a href="${createLink(uri: '/')}">Home</a></li>
 							<g:each var="c" in="${grailsApplication.controllerClasses.findAll { !(it.logicalPropertyName in ['dbdoc', 'platformTools']) }.sort { it.fullName } }">
