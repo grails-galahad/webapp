@@ -29,7 +29,7 @@
 
 		<nav class="navbar navbar-fixed-top navbar-inverse">
 			<div class="navbar-inner">
-				<div class="container-fluid">
+				<div class="container">
 					
 					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 						<span class="icon-bar"></span>
@@ -51,7 +51,7 @@
 			</div>
 		</nav>
 
-		<div class="container-fluid">
+		<div class="container">
 			<g:layoutBody/>
 
 			<hr>
