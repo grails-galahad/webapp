@@ -1,4 +1,4 @@
-package twitter.bootstrap.scaffolding
+package com.webapp
 
 class Person {
 	

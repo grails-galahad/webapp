@@ -1,6 +1,6 @@
-package twitter.bootstrap.scaffolding
+package com.webapp
 
-class ErrorsController {
+class ErrorController {
 
 	def index() {
 		throw new RuntimeException("Deliberate error!")
