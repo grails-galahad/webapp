@@ -53,13 +53,50 @@
 
 		<div class="container">
 			<g:layoutBody/>
-
-			<hr>
-
-			<footer>
-				<p>&copy; Company ${new GregorianCalendar().get(Calendar.YEAR)}</p>
-			</footer>
 		</div>
+		
+		<footer class="footer-inverse">
+		    <div class="container page-bottom"></div>
+		    <div class="container">
+		        <div class="row">
+                    <div class="col-centered span3 offset1">
+                        <div class="col-inner">
+                            <h4>Info</h4>
+                            <ul class="unstyled">
+            					<li><a href="${createLink(uri: '/')}">Tour</a></li>
+            					<li><a href="${createLink(uri: '/')}">Pricing</a></li>
+            					<li><a href="${createLink(uri: '/')}">FAQ</a></li>
+            					<li><a href="${createLink(uri: '/')}">Support</a></li>
+            				</ul>
+        				</div>
+                    </div>
+                    <div class="col-centered span3">
+                        <div class="col-inner">
+                            <h4>Company</h4>
+                            <ul class="unstyled">
+            					<li><a href="${createLink(uri: '/')}">About</a></li>
+            					<li><a href="${createLink(uri: '/')}">Press</a></li>
+            					<li><a href="${createLink(uri: '/')}">Contact</a></li>
+            					<li><a href="${createLink(uri: '/')}">Terms</a></li>
+            					<li><a href="${createLink(uri: '/')}">Privacy</a></li>
+            				</ul>
+        				</div>
+                    </div>
+                    <div class="col-centered span3">
+                        <div class="col-inner">
+                            <h4>Follow</h4>
+                            <ul class="unstyled">
+            					<li><a href="${createLink(uri: '/')}">Blog</a></li>
+            					<li><a href="${createLink(uri: '/')}">Twitter</a></li>
+            					<li><a href="${createLink(uri: '/')}">Facebook</a></li>
+        					</ul>
+    					</div>
+                    </div>
+		        </div>
+		        
+    			<p class="copy">&copy; Company, Inc. ${new GregorianCalendar().get(Calendar.YEAR)}</p>
+			</div>
+		</footer>
 
 		<r:layoutResources/>
 

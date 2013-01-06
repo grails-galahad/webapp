@@ -1,27 +1,6 @@
 @import "../bootstrap/less/bootstrap.less";
 @import "variables.less";
 
-/* Mixins */
-.rounded {
-       -moz-border-radius: 8px;
-    -webkit-border-radius: 8px;
-            border-radius: 8px;
-}
-
-.inverse-gradient {
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#444444), to(#111111));
-    background-image: -webkit-linear-gradient(top, #444444, #111111);
-    background-image: -o-linear-gradient(top, #444444, #111111);
-    background-image: linear-gradient(to bottom, #444444, #111111);
-    background-image: -moz-linear-gradient(center top, #444444, #111111);
-    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff444444', endColorstr='#ff111111', GradientType=0);
-    filter: progid:dximagetransform.microsoft.gradient(enabled=false);
-}
-
-.highlight {
-    background-color: @warningBackground;
-}
-
 /* Layout */
 .navbar {
     .brand {
@@ -31,8 +10,57 @@
 
 .navbar-inverse {
     .navbar-inner {
-        .inverse-gradient;
+        #gradient > .vertical(#444, #111);
     }
+}
+
+footer {
+    background-color: #cecece;
+    color: #555;
+    margin: 60px 0 0 0;
+    padding: 30px 0 20px 0;
+    text-shadow: 0 1px 0 #fff;
+    a, a:hover {
+        color: #555;
+        text-shadow: none;
+    }
+    
+    &.footer-inverse {
+        background-color: #5c5c5c;
+        color: #ccc;
+        text-shadow: 1px 1px 3px rgba(0,0,0,.4);
+        a, a:hover {
+            color: #ccc;
+        }
+    }
+    
+    .copy {
+        margin-top: 30px
+    }    
+}
+
+.col-centered {
+    text-align: center;
+}
+
+.col-inner {
+    text-align: left;
+    display: inline-block;
+}
+
+.page-bottom {
+    background-color: #fff;
+    height: 40px;
+    margin-top: -30px;
+    margin-bottom: 30px;
+    width: @gridRowWidth + 40;
+       -moz-border-bottom-left-radius: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+       -moz-border-bottom-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+    .box-shadow(0 5px 10px rgba(0,0,0,.2));
 }
 
 /* Scaffolding */
@@ -53,7 +81,7 @@ dd {
   line-height: @baseLineHeight + 5px;
 }
 
-/* Home */
+/* Home page */
 .billboard {
     height: 360px;
     
