@@ -28,6 +28,18 @@ grails.web.disable.multipart=false
 grails.exceptionresolver.params.exclude = ['password']
 grails.hibernate.cache.queries = true
 
+grails {
+    plugins {
+        springsecurity {
+            userLookup {
+                userDomainClassName = 'com.webapp.User'
+                authorityJoinClassName = 'com.webapp.UserRole'
+            }
+            authority.className = 'com.webapp.Role'
+        }
+    }
+}
+
 environments {
     development {
         grails.logging.jul.usebridge = true
