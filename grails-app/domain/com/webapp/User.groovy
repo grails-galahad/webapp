@@ -30,6 +30,10 @@ class User {
 	static mapping = {
 		password column: '`password`'
 	}
+	
+	static views = [
+	    list: [includes:['fullName', 'email', 'address']]
+	]
 
 	Set<Role> getAuthorities() {
 		UserRole.findAllByUser(this).collect { it.role } as Set
