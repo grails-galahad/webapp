@@ -1,3 +1,4 @@
+<% import grails.persistence.Event %>
 <%=packageName%>
 <!doctype html>
 <html>
@@ -52,7 +53,17 @@
 				<fieldset>
 					<g:form class="form-horizontal" action="create" <%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
 						<fieldset>
-							<f:all bean="${propertyName}"/>
+					        <f:with bean="${propertyName}">
+						    <%  excludedProps = Event.allEvents.toList() << 'id' << 'version'
+            				    excludedProps += domainClass.clazz.views?.create?.excludes ?: []
+            					allowedNames = domainClass.persistentProperties*.name << 'dateCreated' << 'lastUpdated'
+            					if (domainClass.clazz.views?.create?.includes) allowedNames.retainAll(domainClass.clazz.views.create.includes)
+            					props = domainClass.properties.findAll { allowedNames.contains(it.name) && !excludedProps.contains(it.name) }
+            					Collections.sort(props, comparator.constructors[0].newInstance([domainClass] as Object[]))
+            					props.each { p -> %>
+                                    <f:field property="${p.name}"/>
+            				<%  } %>
+                            </f:with>
 							<div class="form-actions">
 								<button type="submit" class="btn btn-primary">
 									<i class="icon-ok icon-white"></i>

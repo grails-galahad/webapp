@@ -6,7 +6,7 @@ class User {
 
 	String username
 	String password
-	boolean enabled
+	boolean enabled = true
 	boolean accountExpired
 	boolean accountLocked
 	boolean passwordExpired
@@ -33,7 +33,8 @@ class User {
 	
 	static views = [
 	    list: [includes:['fullName', 'email', 'address']],
-	    show: [excludes:['username', 'password']]
+	    show: [excludes:['username', 'password']],
+	    create: [excludes:['enabled', 'accountExpired', 'accountLocked', 'passwordExpired']]
 	]
 
 	Set<Role> getAuthorities() {

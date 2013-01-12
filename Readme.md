@@ -13,3 +13,9 @@ About Galahad
 -------------
 
 Named after Sir Galahad the Pure, Galahad is a collection of pristine Grails starter projects for specific use cases. Each project reflects a set of opinionated choices about design paradigms, plugins, and testing methodologies.
+
+TODO
+----
+* Add domain class configured field filtering to edit template
+* Investigate performance issue with create and edit views
+* Use f:display in show template
