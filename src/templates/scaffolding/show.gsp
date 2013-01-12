@@ -42,7 +42,9 @@
 
 				<dl>
 				<%  excludedProps = Event.allEvents.toList() << 'id' << 'version'
+				    excludedProps += domainClass.clazz.views?.show?.excludes ?: []
 					allowedNames = domainClass.persistentProperties*.name << 'dateCreated' << 'lastUpdated'
+					if (domainClass.clazz.views?.show?.includes) allowedNames.retainAll(domainClass.clazz.views.show.includes)
 					props = domainClass.properties.findAll { allowedNames.contains(it.name) && !excludedProps.contains(it.name) }
 					Collections.sort(props, comparator.constructors[0].newInstance([domainClass] as Object[]))
 					props.each { p -> %>

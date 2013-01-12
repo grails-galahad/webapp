@@ -32,7 +32,8 @@ class User {
 	}
 	
 	static views = [
-	    list: [includes:['fullName', 'email', 'address']]
+	    list: [includes:['fullName', 'email', 'address']],
+	    show: [excludes:['username', 'password']]
 	]
 
 	Set<Role> getAuthorities() {
