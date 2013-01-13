@@ -17,5 +17,5 @@ Named after Sir Galahad the Pure, Galahad is a collection of pristine Grails sta
 TODO
 ----
 * Add domain class configured field filtering to edit template
-* Investigate performance issue with create and edit views
+* Field template for rendering password
 * Use f:display in show template

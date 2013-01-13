@@ -34,7 +34,8 @@ class User {
 	static views = [
 	    list: [includes:['fullName', 'email', 'address']],
 	    show: [excludes:['username', 'password']],
-	    create: [excludes:['enabled', 'accountExpired', 'accountLocked', 'passwordExpired']]
+	    create: [excludes:['enabled', 'accountExpired', 'accountLocked', 'passwordExpired']],
+	    edit: [excludes:['enabled', 'accountExpired', 'accountLocked', 'passwordExpired']]
 	]
 
 	Set<Role> getAuthorities() {
