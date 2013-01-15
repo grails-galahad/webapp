@@ -1,3 +1,4 @@
+grails.app.context = '/'
 grails.project.groupId = "com.$appName"
 grails.mime.file.extensions = true
 grails.mime.use.accept.header = false
