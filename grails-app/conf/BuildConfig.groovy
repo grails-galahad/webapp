@@ -28,7 +28,7 @@ grails.project.dependency.resolution = {
         runtime ":hibernate:$grailsVersion"
 		runtime ":jquery:1.8.3"
         runtime ":resources:1.1.6"
-        runtime ":database-migration:1.2.1"
+        runtime ":database-migration:1.3.2"
 		// runtime ":cache-headers:1.1.5"
 		// runtime ":cached-resources:1.0"
 		// runtime ":zipped-resources:1.0"
