@@ -35,7 +35,7 @@ class User {
 	    list: [includes:['fullName', 'email', 'address']],
 	    show: [excludes:['username', 'password']],
 	    create: [excludes:['enabled', 'accountExpired', 'accountLocked', 'passwordExpired']],
-	    edit: [excludes:['enabled', 'accountExpired', 'accountLocked', 'passwordExpired']]
+	    edit: [excludes:['password', 'enabled', 'accountExpired', 'accountLocked', 'passwordExpired']]
 	]
 
 	Set<Role> getAuthorities() {
