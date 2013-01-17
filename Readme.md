@@ -9,10 +9,12 @@ Usage
 
 Simply clone the project, rename the root directory, and change the `app.name` property in `application.properties`. You may also want to remove the test controllers and domain classes.
 
+
 About Galahad
 -------------
 
 Named after Sir Galahad the Pure, Galahad is a collection of pristine Grails starter projects for specific use cases. Each project reflects a set of opinionated choices about design paradigms, plugins, and testing methodologies.
+
 
 TODO
 ----

@@ -1,4 +1,5 @@
 <% import grails.persistence.Event %>
+<% import org.codehaus.groovy.grails.commons.GrailsClassUtils as GCU %>
 <%=packageName%>
 <!doctype html>
 <html>
@@ -44,9 +45,9 @@
 					<thead>
 						<tr>
 						<%  excludedProps = Event.allEvents.toList() << 'id' << 'version' << 'dateCreated' << 'lastUpdated'
-						    excludedProps += domainClass.clazz.views?.list?.excludes ?: []
+						    if (GCU.isStaticProperty(domainClass.clazz, 'views')) excludedProps += domainClass.clazz.views?.list?.excludes ?: []
 							allowedNames = domainClass.persistentProperties*.name
-							if (domainClass.clazz.views?.list?.includes) allowedNames.retainAll(domainClass.clazz.views.list.includes)
+							if (GCU.isStaticProperty(domainClass.clazz, 'views') && domainClass.clazz.views?.list?.includes) allowedNames.retainAll(domainClass.clazz.views.list.includes)
 							props = domainClass.properties.findAll { allowedNames.contains(it.name) && !excludedProps.contains(it.name) && it.type != null && !Collection.isAssignableFrom(it.type) }
 							Collections.sort(props, comparator.constructors[0].newInstance([domainClass] as Object[]))
 							props.eachWithIndex { p, i ->
