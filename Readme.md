@@ -18,6 +18,5 @@ Named after Sir Galahad the Pure, Galahad is a collection of pristine Grails sta
 
 TODO
 ----
-* Field template for rendering password
 * Calendar for date fields
 * Use f:display in show template (?)
