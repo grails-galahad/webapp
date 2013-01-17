@@ -24,19 +24,18 @@ environments {
     development {
         dataSource {
             dbCreate = "create-drop"
-            url = "jdbc:h2:mem:devDb;MVCC=TRUE"
+            url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
         }
     }
     test {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:h2:mem:testDb;MVCC=TRUE"
+            url = "jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
         }
     }
     production {
         dataSource {
-            dbCreate = "update"
-            url = "jdbc:h2:mem:prodDb;MVCC=TRUE"
+            url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
         }
     }
 }

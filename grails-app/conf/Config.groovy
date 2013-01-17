@@ -27,7 +27,7 @@ grails.enable.native2ascii = true
 grails.spring.bean.packages = []
 grails.web.disable.multipart=false
 grails.exceptionresolver.params.exclude = ['password']
-grails.hibernate.cache.queries = true
+grails.hibernate.cache.queries = false
 
 grails {
     plugins {

@@ -10,6 +10,7 @@ grails.project.dependency.resolution = {
     inherits "global"
     log "error"
     checksums true
+    legacyResolve false
 
     repositories {
         inherits true
@@ -25,7 +26,7 @@ grails.project.dependency.resolution = {
 
     plugins {
         runtime ":hibernate:$grailsVersion"
-		runtime ":jquery:1.8.0"
+		runtime ":jquery:1.8.3"
         runtime ":resources:1.1.6"
         runtime ":database-migration:1.2.1"
 		// runtime ":cache-headers:1.1.5"
