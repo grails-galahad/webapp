@@ -18,5 +18,4 @@ Named after Sir Galahad the Pure, Galahad is a collection of pristine Grails sta
 
 TODO
 ----
-* Calendar for date fields
-* Use f:display in show template (?)
+* Remove Person and add Task

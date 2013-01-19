@@ -10,4 +10,6 @@ $('tr.clickable').click(function() {
     if (href) window.location = href;
 });
 
+$('.datepicker').datepicker({ autoclose: true, todayBtn: true, todayHighlight: true, keyboardNavigation: false });
+
 });
