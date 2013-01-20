@@ -5,15 +5,6 @@ class BootStrap {
 
     def init = { servletContext ->
         
-        if (!Person.count() && Environment.current != Environment.TEST) {
-            new Person(firstName:"Ron", lastName:"Burgundy", email:"ronb@kvwn.net", dateOfBirth:Date.parse("yyyy-MM-dd'T'HH:mm:ssz", "1935-07-17T00:00:00EST"),
-                    address:new Address(address1:'123 Street Rd.', address2:'Apt. 1A', city:'San Diego', state: 'CA', postalCode:'92101')).save(flush:true, failOnError:true)
-            new Person(firstName:"Brian", lastName:"Fantana", email:"brianf@kvwn.net", dateOfBirth:Date.parse("yyyy-MM-dd'T'HH:mm:ssz", "1935-07-17T00:00:00EST"),
-                    address:new Address(address1:'123 Street Rd.', address2:'Apt. 1B', city:'San Diego', state: 'CA', postalCode:'92101')).save(flush:true, failOnError:true)
-            new Person(firstName:"Brick", lastName:"Tamland", email:"brickt@kvwn.net", dateOfBirth:Date.parse("yyyy-MM-dd'T'HH:mm:ssz", "1935-07-17T00:00:00EST"),
-                    address:new Address(address1:'123 Street Rd.', address2:'Apt. 1C', city:'San Diego', state: 'CA', postalCode:'92101')).save(flush:true, failOnError:true)
-        }
-                
         if (!Role.count()) {
             def roleUser = new Role(authority: 'ROLE_USER').save(flush:true, failOnError:true)
             
@@ -25,7 +16,8 @@ class BootStrap {
                         ]
                 
                 users.each { uname, data ->
-                    def user = new User(username:uname, password:'asdf', fullName:data[0], email:data[1], dateOfBirth:Date.parse("yyyy-MM-dd'T'HH:mm:ssz", "1935-07-17T00:00:00EST"),
+                    def user = new User(username:uname, password:'asdf', fullName:data[0], email:data[1],
+                            dateOfBirth:Date.parse("yyyy-MM-dd'T'HH:mm:ssz", "1935-07-17T00:00:00EST"),
                             address:new Address(
                                 address1: '123 Street Rd.',
                                 address2: data[2],
