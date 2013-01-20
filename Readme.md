@@ -18,8 +18,7 @@ Named after Sir Galahad the Pure, Galahad is a collection of pristine Grails sta
 
 TODO
 ----
-* Remove Person and add Task
-* Remove bootstrap forms taglib (?)
 * Login
 * Signup
 * Error pages
+* Remove bootstrap forms taglib (?)

@@ -1,4 +1,5 @@
 <%@ page import="org.codehaus.groovy.grails.web.servlet.GrailsApplicationAttributes" %>
+<%! import org.codehaus.groovy.grails.commons.GrailsClassUtils as GCU %>
 <!doctype html>
 <html lang="en">
 	<head>
@@ -42,8 +43,8 @@
 					<div class="nav-collapse collapse">
 						<ul class="nav">							
 							<li<%= request.forwardURI == "${createLink(uri: '/')}" ? ' class="active"' : '' %>><a href="${createLink(uri: '/')}">Home</a></li>
-							<g:each var="c" in="${grailsApplication.controllerClasses.findAll { !(it.logicalPropertyName in ['dbdoc', 'platformTools']) }.sort { it.fullName } }">
-								<li<%= c.logicalPropertyName == controllerName ? ' class="active"' : '' %>><g:link controller="${c.logicalPropertyName}">${c.naturalName.replace(' Controller', '')}</g:link></li>
+							<g:each var="c" in="${grailsApplication.controllerClasses.findAll { GCU.isStaticProperty(it.clazz, 'menuItem') }.sort { it.fullName } }">
+								<li<%= c.logicalPropertyName == controllerName ? ' class="active"' : '' %>><g:link controller="${c.logicalPropertyName}">${c.clazz.menuItem}</g:link></li>
 							</g:each>
 						</ul>
 					</div>
