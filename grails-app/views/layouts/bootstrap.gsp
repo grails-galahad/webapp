@@ -48,6 +48,21 @@
 							</g:each>
 						</ul>
 					</div>
+					
+                    <ul class="nav pull-right">
+    					<sec:ifLoggedIn>
+                            <li class="dropdown">
+                                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user icon-white"></i> <sec:loggedInUserInfo field="username" /><b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><g:link controller="logout">Sign Out</g:link></li>
+                                </ul>
+                            </li>
+                        </sec:ifLoggedIn>
+                        <sec:ifNotLoggedIn>
+                            <li><a href="javascript:void(0)">Sign Up</a></li>
+                            <li><g:link controller="login">Login</g:link></li>
+                        </sec:ifNotLoggedIn>
+                    </ul>
 				</div>
 			</div>
 		</nav>

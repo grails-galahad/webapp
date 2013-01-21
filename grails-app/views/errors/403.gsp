@@ -1,13 +1,13 @@
 <head>
     <meta name="layout" content="bootstrap"/>
-    <title><g:message code="springSecurity.denied.title" /></title>
+    <title>Oops - Forbidden</title>
 </head>
 
 <body>
 	<div class="big-message">
 		<h1>Oops!</h1>
-		<h2>Access Denied</h2>
-		<p>Sorry, you don't have access to this page!</p>
+		<h2>Forbidden</h2>
+		<p>Sorry, you tried to do something that isn't supported.</p>
 		
 		<div class="actions">
 			<a href="./" class="btn btn-large btn-primary">
