@@ -18,7 +18,6 @@ Named after Sir Galahad the Pure, Galahad is a collection of pristine Grails sta
 
 TODO
 ----
-* Login
+* Use display tag for show screens
 * Signup
-* Error pages
 * Remove bootstrap forms taglib (?)
