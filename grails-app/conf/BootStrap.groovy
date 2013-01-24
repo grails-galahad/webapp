@@ -31,7 +31,12 @@ class BootStrap {
                 
             }
         }
-        
+
+        if (!Task.count()) {
+            new Task(desc:"Use f:display tag for show scaffolding", due: new Date() + 5).save(failOnError:true)
+            new Task(desc:"Implement basic sign up flow", due: new Date() + 10).save(failOnError:true)
+            new Task(desc:"Starter features page based on boostrap jumbotron template", due: new Date() + 15).save(failOnError:true)
+        }
     }
     
     def destroy = {
