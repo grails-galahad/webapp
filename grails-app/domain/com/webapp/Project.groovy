@@ -1,0 +1,24 @@
+package com.webapp
+
+class Project {
+    
+    String name
+    User owner
+    Date dateCreated
+    Date lastUpdated
+    
+    static hasMany = [tasks:Task]
+
+    static constraints = {
+        name blank:false
+    }
+    
+    static views = [
+	    list: [includes:['name', 'owner']],
+	    show: [excludes:['lastUpdated']],
+	    create: [excludes:['dateCreated', 'lastUpdated']],
+	    edit: [excludes:['dateCreated', 'lastUpdated']]
+	]
+	
+	String toString() { name }
+}
