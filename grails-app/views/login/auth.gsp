@@ -3,14 +3,6 @@
 	<head>
 		<meta name="layout" content="bootstrap"/>
 		<title>Login</title>
-		
-		<style type="text/css">
-              body {
-                padding-top: 40px;
-                padding-bottom: 40px;
-                background-color: #f5f5f5;
-              }
-        </style>
 	</head>
 
 	<body>
