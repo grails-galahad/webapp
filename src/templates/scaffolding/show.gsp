@@ -45,12 +45,17 @@
 				<%  excludedProps = Event.allEvents.toList() << 'id' << 'version'
 				    if (GCU.isStaticProperty(domainClass.clazz, 'views')) excludedProps += domainClass.clazz.views?.show?.excludes ?: []
 					allowedNames = domainClass.persistentProperties*.name << 'dateCreated' << 'lastUpdated'
-					if (GCU.isStaticProperty(domainClass.clazz, 'views') && domainClass.clazz.views?.show?.includes) allowedNames.retainAll(domainClass.clazz.views.show.includes)
+					if (GCU.isStaticProperty(domainClass.clazz, 'views') && domainClass.clazz.views?.show?.includes) {
+					    allowedNames.retainAll(domainClass.clazz.views.show.includes)
+					    excludedProps.removeAll(domainClass.clazz.views.show.includes)
+				    }
 					props = domainClass.properties.findAll { allowedNames.contains(it.name) && !excludedProps.contains(it.name) }
 					Collections.sort(props, comparator.constructors[0].newInstance([domainClass] as Object[]))
 					props.each { p -> %>
-					    
+					
+					<g:if test="\${${propertyName}?.${p.name}}">
 					<f:display bean="\${${propertyName}}" property="${p.name}"/>
+					</g:if>
 					
 				<%  } %>
 				</dl>

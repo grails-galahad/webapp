@@ -16,7 +16,7 @@ class Project {
     static views = [
 	    list: [includes:['name', 'owner']],
 	    show: [excludes:['lastUpdated']],
-	    create: [excludes:['dateCreated', 'lastUpdated']],
+	    create: [excludes:['tasks', 'dateCreated', 'lastUpdated']],
 	    edit: [excludes:['dateCreated', 'lastUpdated']]
 	]
 	

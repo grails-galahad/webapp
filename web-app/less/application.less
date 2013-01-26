@@ -44,15 +44,6 @@ footer {
     }    
 }
 
-.col-centered {
-    text-align: center;
-}
-
-.col-inner {
-    text-align: left;
-    display: inline-block;
-}
-
 .page-bottom {
     background-color: #fff;
     height: 40px;
@@ -66,6 +57,20 @@ footer {
     -webkit-border-bottom-right-radius: 8px;
             border-bottom-right-radius: 8px;
     .box-shadow(0 5px 10px rgba(0,0,0,.2));
+}
+
+/* General */
+.text-xlarge {
+    font-size: 1.8em;
+}
+
+.col-centered {
+    text-align: center;
+}
+
+.col-inner {
+    text-align: left;
+    display: inline-block;
 }
 
 /* Scaffolding */
@@ -86,7 +91,7 @@ dd {
   line-height: @baseLineHeight + 5px;
 }
 
-/* Home page */
+/* Home */
 .billboard {
     height: 360px;
     
@@ -123,7 +128,7 @@ dd {
     
 }
 
-/* Signin page*/
+/* Signin */
 .login {
     margin-top: 40px;
 }
@@ -147,7 +152,7 @@ dd {
     }
 }
 
-/* Errors */
+/* Error pages */
 .big-message {
     color: #5A5A5A;
     margin: 8em 0;
@@ -172,12 +177,14 @@ dd {
     }
 }
 
+/* Projects */
+textarea#name {
+    width: 450px;
+    height: 40px;
+}
+
 /* Tasks */
 textarea#desc {
     width: 450px;
     height: 60px;
-}
-
-.text-xlarge {
-    font-size: 1.8em;
 }

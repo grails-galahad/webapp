@@ -19,9 +19,9 @@ class User {
 	static embedded = ["address"]
 
 	static constraints = {
+		fullName blank: false
 		username blank: false, unique: true
 		password blank: false
-		fullName blank: false
 		email nullable: true, email: true
 		dateOfBirth nullable: true
 		address nullable: true
