@@ -18,7 +18,6 @@ Named after Sir Galahad the Pure, Galahad is a collection of pristine Grails sta
 
 TODO
 ----
-* Test CRUD with associations
 * Remove scaffolding CSS
 * Signup
 * Remove bootstrap forms taglib (?)
