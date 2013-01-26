@@ -6,15 +6,6 @@
 	</head>
 
 	<body>
-
-	    <%--
-        <div class="hero-unit">
-            <h1>Hello, world!</h1>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-            <p><a class="btn btn-primary btn-large" href="javascript:void(0)">Learn more »</a></p>
-        </div>
-        --%>
-        
         <div class="billboard">
             <r:img dir="images" file="billboard.jpg" />
             <div class="billboard-caption">
