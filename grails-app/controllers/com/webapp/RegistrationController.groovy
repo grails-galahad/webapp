@@ -17,7 +17,7 @@ class RegistrationController {
         
         springSecurityService.reauthenticate user.username
         
-        flash.message = message(code: 'default.created.message', args: [message(code: 'user.label', default: 'User'), user.id])
+        flash.message = message(code: 'welcome.message', default: 'Welcome!')
         redirect controller:"user", action:"show", id:user.id
     }
 }
