@@ -22,7 +22,7 @@ class User {
 		fullName blank: false
 		username blank: false, unique: true
 		password blank: false
-		email nullable: true, email: true
+		email blank: false, email: true
 		dateOfBirth nullable: true
 		address nullable: true
 	}

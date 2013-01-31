@@ -59,7 +59,7 @@
                             </li>
                         </sec:ifLoggedIn>
                         <sec:ifNotLoggedIn>
-                            <li><a href="javascript:void(0)">Sign Up</a></li>
+                            <li><g:link controller="registration">Sign Up</g:link></li>
                             <li><g:link controller="login">Login</g:link></li>
                         </sec:ifNotLoggedIn>
                     </ul>
