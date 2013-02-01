@@ -35,7 +35,7 @@ environments {
     }
     production {
         dataSource {
-            url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
+            url = "jdbc:h2:mem:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
         }
     }
 }
