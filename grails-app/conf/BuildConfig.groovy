@@ -22,6 +22,7 @@ grails.project.dependency.resolution = {
     }
 
     dependencies {
+        test "org.spockframework:spock-grails-support:0.7-groovy-2.0"
     }
 
     plugins {
@@ -40,6 +41,8 @@ grails.project.dependency.resolution = {
         compile ":fields:1.3"
         compile ":spring-security-core:1.2.7.3"
         
-        test ":spock:0.7"
+        test(":spock:0.7") {
+            exclude "spock-grails-support"
+        }
     }
 }
