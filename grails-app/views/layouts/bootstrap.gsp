@@ -43,9 +43,16 @@
 					<div class="nav-collapse collapse">
 						<ul class="nav">							
 							<li<%= request.forwardURI == "${createLink(uri: '/')}" ? ' class="active"' : '' %>><a href="${createLink(uri: '/')}">Home</a></li>
-							<g:each var="c" in="${grailsApplication.controllerClasses.findAll { GCU.isStaticProperty(it.clazz, 'menuItem') }.sort { it.fullName } }">
-								<li<%= c.logicalPropertyName == controllerName ? ' class="active"' : '' %>><g:link controller="${c.logicalPropertyName}">${c.clazz.menuItem}</g:link></li>
-							</g:each>
+							<sec:ifLoggedIn>
+    							<g:each var="c" in="${grailsApplication.controllerClasses.findAll { GCU.isStaticProperty(it.clazz, 'menuItem') }.sort { it.fullName } }">
+    								<li<%= c.logicalPropertyName == controllerName ? ' class="active"' : '' %>><g:link controller="${c.logicalPropertyName}">${c.clazz.menuItem}</g:link></li>
+    							</g:each>
+							</sec:ifLoggedIn>
+							<sec:ifNotLoggedIn>
+							    <li><a href="${createLink(uri: '/')}">About</a></li>
+							    <li><a href="${createLink(uri: '/')}">Tour</a></li>
+							    <li><a href="${createLink(uri: '/')}">Pricing</a></li>
+							</sec:ifNotLoggedIn>
 						</ul>
 					</div>
 					
@@ -77,8 +84,9 @@
 		        <div class="row">
 		            <div class="col-centered span8 offset2">
     		            <a href="${createLink(uri: '/')}">About</a> <span class="nav-separator">|</span>
-    		            <a href="${createLink(uri: '/')}">Blog</a> <span class="nav-separator">|</span>
     		            <a href="${createLink(uri: '/')}">Tour</a> <span class="nav-separator">|</span>
+    		            <a href="${createLink(uri: '/')}">Pricing</a> <span class="nav-separator">|</span>
+    		            <a href="${createLink(uri: '/')}">Blog</a> <span class="nav-separator">|</span>
     		            <a href="${createLink(uri: '/')}">Contact</a> <span class="nav-separator">|</span>
     		            <a href="${createLink(uri: '/')}">Terms</a> <span class="nav-separator">|</span>
     		            <a href="${createLink(uri: '/')}">Privacy</a>
