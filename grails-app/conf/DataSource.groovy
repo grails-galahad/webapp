@@ -35,6 +35,7 @@ environments {
     }
     production {
         dataSource {
+            dbCreate = "create-drop"
             url = "jdbc:h2:mem:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
         }
     }
