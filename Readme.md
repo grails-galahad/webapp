@@ -1,13 +1,19 @@
 Galahad - webapp
 ================
 
-A starter project for a typical web app based on Twitter Bootstrap and a curated set of plugins.
+A starter project for a typical consumer web app based on Twitter Bootstrap and a curated set of plugins.
 
 
 Usage
 -----
 
-Simply clone the project, rename the root directory, and change the `app.name` property in `application.properties`. You may also want to remove the test controllers and domain classes.
+Simply clone the project, change the `app.name` property in `application.properties`, and start your own Git repo.
+
+    git clone https://github.com/grails-galahad/webapp.git myapp
+    cd myapp
+    rm -rf .git
+    sed -i "" "s/webapp/myapp/" application.properties
+    git init
 
 
 About Galahad
@@ -18,7 +24,6 @@ Named after Sir Galahad the Pure, Galahad is a collection of pristine Grails sta
 
 TODO
 ----
-* Enforce login
 * JS field signup form spam prevention
 * Implement remember me token
 * Sign up button in main nav
@@ -26,3 +31,13 @@ TODO
 * SSL
 * Remove bootstrap forms taglib (?)
 * Test nav bar collapse
+* Heroku plugin
+* Cookie/DB sessions
+* Add admin security group and menu
+* Add console plugin
+* Enable db console in prod and secure
+* Geb tests
+* Google analytics
+* Mailchimp integration
+* Mandrill integration
+* Look for minifier that works with Less CSS plugin
