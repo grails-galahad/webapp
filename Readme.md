@@ -12,7 +12,7 @@ Simply clone the project, change the `app.name` property in `application.propert
     git clone https://github.com/grails-galahad/webapp.git myapp
     cd myapp
     rm -rf .git
-    sed -i "" "s/webapp/myapp/" application.properties
+    grails galahad-init myapp
     git init
 
 
@@ -24,7 +24,6 @@ Named after Sir Galahad the Pure, Galahad is a collection of pristine Grails sta
 
 TODO
 ----
-* Application rename and repackage script
 * Implement remember me token
 * Sign up button in main nav
 * Dropdown login form
