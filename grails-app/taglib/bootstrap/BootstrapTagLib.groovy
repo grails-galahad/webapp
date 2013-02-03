@@ -1,12 +1,19 @@
-package twitter.bootstrap.scaffolding
+package bootstrap
 
 import org.springframework.validation.Errors
 import org.springframework.validation.FieldError
 import org.springframework.web.servlet.support.RequestContextUtils as RCU
 
-class PaginationTagLib {
+class BootstrapTagLib {
 
 	static namespace = "bootstrap"
+	
+	def alert = { attrs, body ->
+		out << '<div class="alert alert-block ' << attrs.class.tokenize().join(" ") << '">'
+		out << '<a class="close" data-dismiss="alert">&times;</a>'
+		out << '<p>' << body() << '</p>'
+		out << '</div>'
+	}
 	
 	def paginate = { attrs ->
         def writer = out
@@ -45,7 +52,6 @@ class PaginationTagLib {
         }
         linkTagAttrs.params = linkParams
 
-        // determine paging variables
         def steps = maxsteps > 0
         int currentstep = (offset / max) + 1
         int firststep = 1
@@ -53,7 +59,6 @@ class PaginationTagLib {
 
 		writer << '<ul>'
 
-        // display previous link when not on firststep
 		if (currentstep > firststep) {
 			linkTagAttrs.class = 'prevLink'
 			linkParams.offset = offset - max
@@ -66,11 +71,9 @@ class PaginationTagLib {
 			writer << '</li>'
 		}
 
-        // display steps when steps are enabled and laststep is not firststep
         if (steps && laststep > firststep) {
             linkTagAttrs.class = 'step'
 
-            // determine begin and endstep paging variables
             int beginstep = currentstep - Math.round(maxsteps / 2) + (maxsteps % 2)
             int endstep = currentstep + Math.round(maxsteps / 2) - 1
 
@@ -86,7 +89,6 @@ class PaginationTagLib {
                 endstep = laststep
             }
 
-            // display paginate steps
 			for (int i in beginstep..endstep) {
                 linkParams.offset = (i - 1) * max
 				writer << '<li'
@@ -97,7 +99,6 @@ class PaginationTagLib {
             }
         }
 
-        // display next link when not on laststep
 		if (currentstep < laststep) {
 			linkTagAttrs.class = 'nextLink'
 			linkParams.offset = offset + max

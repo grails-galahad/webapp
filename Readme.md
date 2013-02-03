@@ -24,11 +24,11 @@ Named after Sir Galahad the Pure, Galahad is a collection of pristine Grails sta
 
 TODO
 ----
+* Application rename and repackage script
 * Implement remember me token
 * Sign up button in main nav
 * Dropdown login form
 * SSL
-* Remove bootstrap forms taglib (?)
 * Test nav bar collapse
 * Heroku plugin
 * Cookie/DB sessions
@@ -39,4 +39,5 @@ TODO
 * Google analytics
 * Mailchimp integration
 * Mandrill integration
+* Password change
 * Look for minifier that works with Less CSS plugin
