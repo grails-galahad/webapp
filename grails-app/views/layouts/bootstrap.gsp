@@ -42,13 +42,13 @@
 
 					<div class="nav-collapse collapse">
 						<ul class="nav">							
-							<li<%= request.forwardURI == "${createLink(uri: '/')}" ? ' class="active"' : '' %>><a href="${createLink(uri: '/')}">Home</a></li>
 							<sec:ifLoggedIn>
     							<g:each var="c" in="${grailsApplication.controllerClasses.findAll { GCU.isStaticProperty(it.clazz, 'menuItem') }.sort { it.fullName } }">
     								<li<%= c.logicalPropertyName == controllerName ? ' class="active"' : '' %>><g:link controller="${c.logicalPropertyName}">${c.clazz.menuItem}</g:link></li>
     							</g:each>
 							</sec:ifLoggedIn>
 							<sec:ifNotLoggedIn>
+    							<li<%= request.forwardURI == "${createLink(uri: '/')}" ? ' class="active"' : '' %>><a href="${createLink(uri: '/')}">Home</a></li>
 							    <li><a href="${createLink(uri: '/')}">About</a></li>
 							    <li><a href="${createLink(uri: '/')}">Tour</a></li>
 							    <li><a href="${createLink(uri: '/')}">Pricing</a></li>

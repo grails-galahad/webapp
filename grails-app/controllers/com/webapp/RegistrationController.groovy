@@ -10,14 +10,21 @@ class RegistrationController {
     
     def save() {
         def user = new User(params)
-        if (!user.save(flush:true)) {
+        user.validate()
+        if (params.terms != 'on') user.errors.reject("registration.terms.required.message", null, "Please accept the terms of use")
+        
+        if (user.hasErrors()) {
             render view:"index", model:[user:user]
             return
         }
         
+        user.save(failOnEror:true)
+        def roleUser = Role.findByAuthority('ROLE_USER')
+        UserRole.create user, roleUser, true
+        
         springSecurityService.reauthenticate user.username
         
         flash.message = message(code: 'welcome.message', default: 'Welcome!')
-        redirect controller:"user", action:"show", id:user.id
+        redirect controller:"project", action:"list", id:user.id
     }
 }

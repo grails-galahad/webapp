@@ -24,7 +24,6 @@ Named after Sir Galahad the Pure, Galahad is a collection of pristine Grails sta
 
 TODO
 ----
-* JS field signup form spam prevention
 * Implement remember me token
 * Sign up button in main nav
 * Dropdown login form

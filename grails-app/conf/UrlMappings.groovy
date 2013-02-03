@@ -6,7 +6,7 @@ class UrlMappings {
 			}
 		}
 
-		"/"(view:"/home/index")
+		"/"(controller:"home")
 		"403"(view:'/errors/403')
 		"404"(view:'/errors/404')
 		"500"(view:'/errors/error') // Map to /errors/500 for go live

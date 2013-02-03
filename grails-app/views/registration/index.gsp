@@ -35,6 +35,18 @@
                                 <f:field property="password" />
                                 <f:field property="email" />
                             </f:with>
+                            
+                            <div class="control-group">
+                                <div class="controls">
+                                	<label id="terms-check" class="checkbox">
+                                	    I accept the <a href="javascript:void(0)">terms of use</a>
+                                	</label>
+                                	<r:script>
+                                	    $('#terms-check').prepend('<input type="checkbox" name="terms" ${params.terms == 'on' ? 'checked="true"' : ''}>');
+                                	</r:script>
+                            	</div>
+                            </div>
+                            
                             <div class="form-actions">
     							<button type="submit" class="btn btn-primary">Sign Up</button>
 							</div>
