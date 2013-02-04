@@ -37,8 +37,17 @@ grails {
                 authorityJoinClassName = 'com.webapp.UserRole'
             }
             authority.className = 'com.webapp.Role'
-            rememberMe.cookieName = 'webapp_remember_me'
-            rememberMe.key = 'webapp'
+            rememberMe {
+                cookieName = 'webapp_remember_me'
+                key = 'webapp'
+            }
+            secureChannel.definition = [
+               '/login/**': 'REQUIRES_SECURE_CHANNEL',
+               '/project/**': 'REQUIRES_SECURE_CHANNEL',
+               '/task/**': 'REQUIRES_SECURE_CHANNEL',
+               '/user/**': 'REQUIRES_SECURE_CHANNEL'
+            ]
+            
         }
     }
 }
@@ -49,7 +58,8 @@ environments {
     }
     production {
         grails.logging.jul.usebridge = false
-        // TODO: grails.serverURL = "http://www.changeme.com"
+        grails.plugins.springsecurity.portMapper.httpPort = 80
+        grails.plugins.springsecurity.portMapper.httpsPort = 443
     }
 }
 

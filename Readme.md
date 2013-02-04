@@ -24,18 +24,18 @@ Named after Sir Galahad the Pure, Galahad is a collection of pristine Grails sta
 
 TODO
 ----
-* Sign up button in main nav
-* Dropdown login form
-* SSL
-* Test nav bar collapse
 * Heroku plugin
 * Cookie/DB sessions
 * Add admin security group and menu
 * Add console plugin
 * Enable db console in prod and secure
 * Geb tests
+* DB migration
 * Google analytics
 * Mailchimp integration
 * Mandrill integration
+* Sign up button in main nav
+* Dropdown login form
+* Test nav bar collapse
 * Password change
 * Look for minifier that works with Less CSS plugin
