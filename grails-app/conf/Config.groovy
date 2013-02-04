@@ -37,6 +37,8 @@ grails {
                 authorityJoinClassName = 'com.webapp.UserRole'
             }
             authority.className = 'com.webapp.Role'
+            rememberMe.cookieName = 'webapp_remember_me'
+            rememberMe.key = 'webapp'
         }
     }
 }
