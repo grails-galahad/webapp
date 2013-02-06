@@ -50,6 +50,16 @@ grails {
             
         }
     }
+    plugin {
+        cookiesession {
+            enabled = true
+            secret = "webappwebapp"
+            sessiontimeout = 30*60
+            cookiename = 'webapp_session'
+            maxcookiesize = 2048
+            cookiecount = 5
+        }
+    }
 }
 
 environments {
@@ -60,6 +70,7 @@ environments {
         grails.logging.jul.usebridge = false
         grails.plugins.springsecurity.portMapper.httpPort = 80
         grails.plugins.springsecurity.portMapper.httpsPort = 443
+        grails.plugins.springsecurity.secureChannel.useHeaderCheckChannelSecurity = true
     }
 }
 
