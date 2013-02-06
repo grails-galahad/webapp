@@ -46,13 +46,13 @@ class BootStrap {
                 def p3 = new Project(name:"Galahad Admin Tool", owner:ronb)
                 p3.save(failOnError:true)
             
-                new Task(desc:"Use f:display tag for show scaffolding", due: new Date() + 5, project:p1).save(failOnError:true)
-                new Task(desc:"Implement basic sign up flow", due: new Date() + 10, project:p1).save(failOnError:true)
-                new Task(desc:"Starter features page based on boostrap jumbotron template", due: new Date() + 15, project:p1).save(failOnError:true)
+                new Task(descr:"Use f:display tag for show scaffolding", due: new Date() + 5, project:p1).save(failOnError:true)
+                new Task(descr:"Implement basic sign up flow", due: new Date() + 10, project:p1).save(failOnError:true)
+                new Task(descr:"Starter features page based on boostrap jumbotron template", due: new Date() + 15, project:p1).save(failOnError:true)
             
-                new Task(desc:"Put base project together", due: new Date() + 5, project:p2).save(failOnError:true)
-                new Task(desc:"Setup plugins", due: new Date() + 10, project:p2).save(failOnError:true)
-                new Task(desc:"Build sample controllers for two resource collections", due: new Date() + 15, project:p2).save(failOnError:true)
+                new Task(descr:"Put base project together", due: new Date() + 5, project:p2).save(failOnError:true)
+                new Task(descr:"Setup plugins", due: new Date() + 10, project:p2).save(failOnError:true)
+                new Task(descr:"Build sample controllers for two resource collections", due: new Date() + 15, project:p2).save(failOnError:true)
             }
         }
     }

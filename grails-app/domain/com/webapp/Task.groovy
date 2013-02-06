@@ -2,7 +2,7 @@ package com.webapp
 
 class Task {
     
-    String desc
+    String descr
     Date due
     Boolean complete = false
     Date dateCreated
@@ -11,20 +11,16 @@ class Task {
     static belongsTo = [project:Project]
 
     static constraints = {
-        desc blank:false
+        descr blank:false
         due nullable:true
     }
     
-    static mapping = {
-        desc column:"description"
-    }
-    
     static views = [
-	    list: [includes:['desc', 'due']],
+	    list: [includes:['descr', 'due']],
 	    show: [excludes:['lastUpdated']],
 	    create: [excludes:['complete', 'dateCreated', 'lastUpdated']],
 	    edit: [excludes:['dateCreated', 'lastUpdated']]
 	]
 	
-	String toString() { desc }
+	String toString() { descr }
 }
