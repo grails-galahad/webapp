@@ -15,6 +15,10 @@ class Task {
         due nullable:true
     }
     
+    static mapping = {
+        desc column:"description"
+    }
+    
     static views = [
 	    list: [includes:['desc', 'due']],
 	    show: [excludes:['lastUpdated']],
