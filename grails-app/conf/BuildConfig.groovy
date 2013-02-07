@@ -41,10 +41,13 @@ grails.project.dependency.resolution = {
 		compile ":lesscss-resources:1.3.0.3"
         compile ":fields:1.3"
         compile ":spring-security-core:1.2.7.3"
+        compile ":heroku:1.0.1"
+        /*
         compile(":heroku:1.0.1") {
             exclude "database-session"
         }
         compile ":cookie-session:2.0.3"
+        */
         
         test(":spock:0.7") {
             exclude "spock-grails-support"
