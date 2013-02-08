@@ -24,15 +24,14 @@ Named after Sir Galahad the Pure, Galahad is a collection of pristine Grails sta
 
 TODO
 ----
-* Task descr field config not working
-* Task list on project edit is misaligned
+* Mandrill integration
 * Cookie sessions
 * Geb tests
 * DB migration
 * Google analytics
 * Mailchimp integration
-* Mandrill integration
 * Sign up button in main nav
+* Task list on project edit is misaligned
 * Dropdown login form
 * Test nav bar collapse
 * Password change

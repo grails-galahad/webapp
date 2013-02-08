@@ -29,7 +29,7 @@ grails.project.dependency.resolution = {
     plugins {
         runtime ":hibernate:$grailsVersion"
 		runtime ":jquery:1.8.3"
-        runtime ":resources:1.1.6"
+        runtime ":resources:1.2.RC2"
         runtime ":database-migration:1.3.2"
         runtime ":cache-headers:1.1.5"
         runtime ":cached-resources:1.0"
@@ -38,7 +38,7 @@ grails.project.dependency.resolution = {
         build ":tomcat:$grailsVersion"
 		
 		compile ":cache:1.0.1"
-		compile ":lesscss-resources:1.3.0.3"
+		compile ":lesscss-resources:1.3.1"
         compile ":fields:1.3"
         compile ":spring-security-core:1.2.7.3"
         compile ":heroku:1.0.1"
