@@ -41,23 +41,18 @@ grails {
                 cookieName = 'webapp_remember_me'
                 key = 'webapp'
             }
+            controllerAnnotations.staticRules = [
+			   "/console/**": ["ROLE_ADMIN"],
+			   "/dbconsole/**": ["ROLE_ADMIN"]
+			]
             secureChannel.definition = [
                '/login/**': 'REQUIRES_SECURE_CHANNEL',
                '/project/**': 'REQUIRES_SECURE_CHANNEL',
                '/task/**': 'REQUIRES_SECURE_CHANNEL',
-               '/user/**': 'REQUIRES_SECURE_CHANNEL'
+               '/user/**': 'REQUIRES_SECURE_CHANNEL',
+               '/console/**': 'REQUIRES_SECURE_CHANNEL',
+               '/dbconsole/**': 'REQUIRES_SECURE_CHANNEL'
             ]
-            
-        }
-    }
-    plugin {
-        cookiesession {
-            enabled = true
-            secret = "webappwebapp"
-            sessiontimeout = 30*60
-            cookiename = 'webapp_session'
-            maxcookiesize = 2048
-            cookiecount = 5
         }
     }
 }
@@ -71,6 +66,7 @@ environments {
         grails.plugins.springsecurity.portMapper.httpPort = 80
         grails.plugins.springsecurity.portMapper.httpsPort = 443
         grails.plugins.springsecurity.secureChannel.useHeaderCheckChannelSecurity = true
+        grails.dbconsole.enabled = true
     }
 }
 

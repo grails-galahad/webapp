@@ -24,10 +24,6 @@ Named after Sir Galahad the Pure, Galahad is a collection of pristine Grails sta
 
 TODO
 ----
-* Add admin security group and menu
-* Add console plugin
-* Enable db console in prod and secure
-* Rename application.less and application.js to webapp.less/js and rename in script to new app name
 * Geb tests
 * DB migration
 * Google analytics

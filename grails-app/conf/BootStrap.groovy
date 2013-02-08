@@ -7,15 +7,18 @@ class BootStrap {
         if (Environment.current != Environment.TEST) {
             if (!Role.count()) {
                 new Role(authority: 'ROLE_USER').save(flush:true, failOnError:true)
+                new Role(authority: 'ROLE_ADMIN').save(flush:true, failOnError:true)
             }
             
             if (!User.count()) {
                 def roleUser = Role.findByAuthority('ROLE_USER')
+                def roleAdmin = Role.findByAuthority('ROLE_ADMIN')
                 assert roleUser
+                assert roleAdmin
                 
                 def users = [
                         ronb: ['Ron Burgundy', 'ronb@kvwn.net', 'Apt. 1A'],
-                        brinaf: ['Brian Fantana', 'brinaf@kvwn.net', 'Apt. 1B'],
+                        brianf: ['Brian Fantana', 'brinaf@kvwn.net', 'Apt. 1B'],
                         brickt: ['Brick Tamland', 'brickt@kvwn.net', 'Apt. 1C']
                         ]
             
@@ -30,7 +33,7 @@ class BootStrap {
                                 postalCode: '92101'
                             ))
                     user.save(flush:true, failOnError:true)
-                    UserRole.create user, roleUser, true
+                    UserRole.create user, (uname == 'ronb' ? roleAdmin : roleUser), true
                 }
             
             }

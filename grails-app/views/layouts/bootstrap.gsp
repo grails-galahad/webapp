@@ -64,6 +64,20 @@
                                     <li><g:link controller="logout">Sign Out</g:link></li>
                                 </ul>
                             </li>
+                            <sec:ifAllGranted roles="ROLE_ADMIN">
+                                <li class="dropdown">
+                                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cog icon-white"></i><b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><g:link controller="console">Groovy Console</g:link></li>
+                                        <g:if test="${System.env['DATABASE_URL']}">
+                                            <li><h:dbconsoleLink>Database Console</h:dbconsoleLink></li>
+                                        </g:if>
+                                        <g:else>
+                                            <li><g:link controller="dbconsole">Database Console</g:link></li>
+                                        </g:else>
+                                    </ul>
+                                </li>
+                            </sec:ifAllGranted>
                         </sec:ifLoggedIn>
                         <sec:ifNotLoggedIn>
                             <li><g:link controller="registration">Sign Up</g:link></li>
