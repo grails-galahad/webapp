@@ -24,6 +24,9 @@ Named after Sir Galahad the Pure, Galahad is a collection of pristine Grails sta
 
 TODO
 ----
+* Task descr field config not working
+* Task list on project edit is misaligned
+* Cookie sessions
 * Geb tests
 * DB migration
 * Google analytics
