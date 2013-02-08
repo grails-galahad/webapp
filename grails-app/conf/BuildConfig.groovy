@@ -22,7 +22,7 @@ grails.project.dependency.resolution = {
     }
 
     dependencies {
-        runtime 'postgresql:postgresql:9.1-901.jdbc4'
+        runtime "postgresql:postgresql:9.1-901.jdbc4"
         test "org.spockframework:spock-grails-support:0.7-groovy-2.0"
     }
 
@@ -41,7 +41,9 @@ grails.project.dependency.resolution = {
 		compile ":lesscss-resources:1.3.1"
         compile ":fields:1.3"
         compile ":spring-security-core:1.2.7.3"
-        compile ":heroku:1.0.1"
+        compile(":heroku:1.0.1") {
+            exclude 'database-session'
+        }
         compile ":console:1.2"
         
         test(":spock:0.7") {

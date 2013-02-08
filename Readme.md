@@ -24,8 +24,8 @@ Named after Sir Galahad the Pure, Galahad is a collection of pristine Grails sta
 
 TODO
 ----
-* Mandrill integration
 * Cookie sessions
+* Mandrill integration
 * Geb tests
 * DB migration
 * Google analytics
