@@ -7,7 +7,7 @@ A starter project for a typical consumer web app based on Twitter Bootstrap and 
 Usage
 -----
 
-Simply clone the project, change the `app.name` property in `application.properties`, and start your own Git repo.
+Simply clone the project, run galahad-init, and init your own git repo.
 
     git clone https://github.com/grails-galahad/webapp.git myapp
     cd myapp
