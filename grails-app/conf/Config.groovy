@@ -55,6 +55,16 @@ grails {
             ]
         }
     }
+    plugin {
+        cookiesession {
+            enabled = true
+            secret = "webappwebapp"
+            sessiontimeout = 30*60
+            cookiename = 'webapp_session'
+            maxcookiesize = 2048
+            cookiecount = 5
+        }
+    }
 }
 
 environments {

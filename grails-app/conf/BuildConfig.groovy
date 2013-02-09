@@ -44,6 +44,7 @@ grails.project.dependency.resolution = {
         compile(":heroku:1.0.1") {
             exclude 'database-session'
         }
+        compile ":cookie-session:2.0.5"
         compile ":console:1.2"
         
         test(":spock:0.7") {
