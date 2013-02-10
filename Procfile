@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar server/jetty-runner.jar --port $PORT --config server/jetty.xml target/*.war
+web: java $JAVA_OPTS -Djetty.port=$PORT -jar server/jetty-runner.jar --config server/jetty.xml target/*.war
