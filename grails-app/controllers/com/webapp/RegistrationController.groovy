@@ -1,5 +1,7 @@
 package com.webapp
 
+import org.springframework.security.core.context.SecurityContextHolder
+
 class RegistrationController {
     
     def springSecurityService
@@ -23,6 +25,7 @@ class RegistrationController {
         UserRole.create user, roleUser, true
         
         springSecurityService.reauthenticate user.username
+        session['SPRING_SECURITY_CONTEXT'] = SecurityContextHolder.context // Workaround for cookie session issue
         
         flash.message = message(code: 'welcome.message', default: 'Welcome!')
         redirect controller:"project", action:"list", id:user.id
