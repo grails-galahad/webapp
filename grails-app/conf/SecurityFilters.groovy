@@ -20,8 +20,8 @@ class SecurityFilters {
         
         if (secureDefs) {
             def securePaths = secureDefs.findAll { it.value == 'REQUIRES_SECURE_CHANNEL' }.collect { it.key }
+            def urlMatcher = new AntUrlPathMatcher(true)
             securePaths.each { path ->
-                def urlMatcher = new AntUrlPathMatcher(true)
                 if (urlMatcher.pathMatchesUrl(path, url)) return true
             }
         }

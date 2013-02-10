@@ -24,11 +24,11 @@ Named after Sir Galahad the Pure, Galahad is a collection of pristine Grails sta
 
 TODO
 ----
-* Cookie sessions
+* New user login blowing up with header full
 * Mandrill integration
+* Google analytics
 * Geb tests
 * DB migration
-* Google analytics
 * Mailchimp integration
 * Sign up button in main nav
 * Task list on project edit is misaligned
