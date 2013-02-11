@@ -46,6 +46,7 @@ grails.project.dependency.resolution = {
         }
         compile ":cookie-session:2.0.5"
         compile ":console:1.2"
+        compile ":mail:1.0.1"
         
         test(":spock:0.7") {
             exclude "spock-grails-support"

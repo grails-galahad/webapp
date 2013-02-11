@@ -27,6 +27,12 @@ class RegistrationController {
         springSecurityService.reauthenticate user.username
         session['SPRING_SECURITY_CONTEXT'] = SecurityContextHolder.context // Workaround for cookie session issue
         
+        sendMail {
+           to user.email
+           subject "Welcome to Webapp"
+           text "Thanks for signing up!"
+        }
+        
         flash.message = message(code: 'welcome.message', default: 'Welcome!')
         redirect controller:"project", action:"list", id:user.id
     }

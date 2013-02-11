@@ -68,9 +68,21 @@ grails {
     }
 }
 
+grails {
+   mail {
+     host = "smtp.mandrillapp.com"
+     port = 587
+     username = "paulcitarella"
+     password = "JEg-I9BapHcYLT8gKesUiw"
+   }
+}
+grails.mail.default.from = "info@enterprise-grails.com"
+
 environments {
     development {
         grails.logging.jul.usebridge = true
+        // grails.mail.disabled = true
+        // grails.mail.overrideAddress = "test@address.com"
     }
     production {
         grails.logging.jul.usebridge = false
