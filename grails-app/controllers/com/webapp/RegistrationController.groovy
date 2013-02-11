@@ -30,7 +30,7 @@ class RegistrationController {
         sendMail {
            to user.email
            subject "Welcome to Webapp"
-           text "Thanks for signing up!"
+           html view:"/emailTemplates/registration", model:[user:user]
         }
         
         flash.message = message(code: 'welcome.message', default: 'Welcome!')

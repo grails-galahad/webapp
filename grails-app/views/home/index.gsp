@@ -11,7 +11,7 @@
             <div class="billboard-caption">
               <h1>Hello, world.</h1>
               <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="javascript:void(0)">Sign up today</a>
+              <g:link class="btn btn-large btn-primary" controller="registration">Sign up today</g:link>
             </div>
         </div>
         
