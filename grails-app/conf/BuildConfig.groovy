@@ -29,6 +29,8 @@ grails.project.dependency.resolution = {
     plugins {
         runtime ":hibernate:$grailsVersion"
 		runtime ":jquery:1.8.3"
+		runtime ":jquery-ui:1.8.24"
+		runtime ":famfamfam:1.0.1"
         runtime ":resources:1.2.RC2"
         runtime ":database-migration:1.3.2"
         runtime ":cache-headers:1.1.5"
@@ -41,6 +43,8 @@ grails.project.dependency.resolution = {
 		compile ":lesscss-resources:1.3.1"
         compile ":fields:1.3"
         compile ":spring-security-core:1.2.7.3"
+        compile ":spring-security-ui:0.2"
+        compile ":mail:1.0.1"
         compile(":heroku:1.0.1") {
             exclude 'database-session'
         }

@@ -1,7 +1,7 @@
 modules = {
     application {
         defaultBundle 'monolith'
-        dependsOn 'jquery, bootstrap-js'
+        dependsOn 'jquery, jquery-ui, bootstrap-js'
         resource url: 'js/application.js'
         resource url: 'js/bootstrap-datepicker.js'
         resource url: 'less/application.less'
@@ -10,6 +10,9 @@ modules = {
 
     overrides {
         jquery {
+            defaultBundle 'monolith'
+        }
+        'jquery-ui' {
             defaultBundle 'monolith'
         }
     }

@@ -50,7 +50,7 @@ grails {
                '/login/**': 'REQUIRES_SECURE_CHANNEL',
                '/project/**': 'REQUIRES_SECURE_CHANNEL',
                '/task/**': 'REQUIRES_SECURE_CHANNEL',
-               '/user/**': 'REQUIRES_SECURE_CHANNEL',
+               '/people/**': 'REQUIRES_SECURE_CHANNEL',
                '/console/**': 'REQUIRES_SECURE_CHANNEL',
                '/dbconsole/**': 'REQUIRES_SECURE_CHANNEL'
             ]
