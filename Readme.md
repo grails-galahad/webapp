@@ -19,7 +19,7 @@ Simply clone the project, run galahad-init, and init your own git repo.
 About Galahad
 -------------
 
-Named after Sir Galahad the Pure, Galahad is a collection of pristine Grails starter projects for specific use cases. Each project reflects a set of opinionated choices about design paradigms, plugins, and testing methodologies.
+Named after Sir Galahad the Pure, Galahad is a collection of pristine Grails starter projects for specific use cases. Each project reflects a set of opinionated choices about design tradeoffs, plugins, testing methodologies, and 3rd party service providers (like hosting and email).
 
 
 TODO
