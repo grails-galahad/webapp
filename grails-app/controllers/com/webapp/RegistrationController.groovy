@@ -29,7 +29,7 @@ class RegistrationController {
         
         sendMail {
            to user.email
-           subject "Welcome to Webapp"
+           subject "Welcome to ${meta(name: 'app.name')}"
            html view:"/emailTemplates/registration", model:[user:user]
         }
         

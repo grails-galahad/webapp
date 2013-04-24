@@ -14,6 +14,11 @@ Simply clone the project, run galahad-init, and init your own git repo.
     rm -rf .git
     grails galahad-init myapp
     git init
+    git add .
+    git ci -am "Initial commit"
+    heroku create
+    git push heroku master
+    heroku open
 
 
 About Galahad
@@ -24,7 +29,7 @@ Named after Sir Galahad the Pure, Galahad is a collection of pristine Grails sta
 
 TODO
 ----
-* Mandrill integration
+* Remove Project and Tasks (during init, or altogether)
 * Google analytics
 * Geb tests
 * DB migration
