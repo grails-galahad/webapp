@@ -1,8 +1,9 @@
 dataSource {
     pooled = true
-    driverClassName = "org.h2.Driver"
-    username = "sa"
-    password = ""
+    driverClassName = "org.postgresql.Driver"
+    dialect = org.hibernate.dialect.PostgreSQLDialect
+    username = "webapp"
+    password = "webapp"
     properties {
         minEvictableIdleTimeMillis=1800000
         timeBetweenEvictionRunsMillis=1800000
@@ -23,20 +24,28 @@ hibernate {
 environments {
     development {
         dataSource {
-            dbCreate = "create-drop"
-            url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
+            dbCreate = "create"
+            url = "jdbc:postgresql://localhost/webapp"
         }
     }
     test {
         dataSource {
             dbCreate = "update"
+            driverClassName = "org.h2.Driver"
+			dialect = org.hibernate.dialect.H2Dialect
             url = "jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
+            username = "sa"
+			password = ""
+        }
+    }
+    stage {
+        dataSource {
+            // Supplied by Heroku plugin
         }
     }
     production {
         dataSource {
-            dbCreate = "create-drop"
-            url = "jdbc:h2:mem:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
+            // Supplied by Heroku plugin
         }
     }
 }

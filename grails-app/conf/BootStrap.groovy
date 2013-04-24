@@ -23,7 +23,7 @@ class BootStrap {
                         ]
             
                 users.each { uname, data ->
-                    def user = new User(username:uname, password:'asdf', fullName:data[0], email:data[1],
+                    def user = new User(password:'asdf', fullName:data[0], email:data[1],
                             dateOfBirth:Date.parse("yyyy-MM-dd'T'HH:mm:ssz", "1935-07-17T00:00:00EST"),
                             address:new Address(
                                 address1: '123 Street Rd.',
@@ -39,7 +39,7 @@ class BootStrap {
             }
         
             if (!Project.count()) {
-                def ronb = User.findByUsername('ronb')
+                def ronb = User.findByEmail('ronb@kvwn.net')
                 assert ronb
                 
                 def p1 = new Project(name:"Galahad Webapp", owner:ronb)

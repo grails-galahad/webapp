@@ -2,7 +2,7 @@ includeTargets << grailsScript("_GrailsInit")
 
 target(main: "Renames a Galahad webapp application and refactors package structure accordingly.") {
     if (!args) {
-        println "Usage: Rename [new_app_name]"
+        println "Usage: grails galahad-init [new_app_name]"
         fail(message:"New app name was not specified")
     }
     

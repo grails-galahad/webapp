@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 	<head>
-		<meta name="layout" content="bootstrap"/>
+		<meta name="layout" content="main"/>
 		<title>Sign Up</title>
 	</head>
 
@@ -31,9 +31,8 @@
 						<fieldset>
 					        <f:with bean="${user}">
                                 <f:field property="fullName" />
-                                <f:field property="username" />
-                                <f:field property="password" />
                                 <f:field property="email" />
+                                <f:field property="password" />
                             </f:with>
                             
                             <div class="control-group">

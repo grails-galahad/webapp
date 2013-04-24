@@ -1,3 +1,5 @@
+import grails.util.Environment
+
 grails.app.context = '/'
 grails.project.groupId = "com.$appName"
 grails.mime.file.extensions = true
@@ -34,6 +36,7 @@ grails {
         springsecurity {
             userLookup {
                 userDomainClassName = 'com.webapp.User'
+                usernamePropertyName = 'email'
                 authorityJoinClassName = 'com.webapp.UserRole'
             }
             authority.className = 'com.webapp.Role'
@@ -57,8 +60,13 @@ grails {
         }
     }
     plugin {
+        databasemigration {
+            updateOnStartFileNames = ['changelog.groovy']
+            dbDocController.enabled = false
+        }
         cookiesession {
             enabled = true
+            springsecuritycompatibility = true
             secret = "webappwebapp"
             sessiontimeout = 30*60
             cookiename = 'webapp_session'
@@ -75,21 +83,31 @@ grails {
      username = "paulcitarella"
      password = "JEg-I9BapHcYLT8gKesUiw"
    }
+   mail.default.from = "info@enterprise-grails.com"
 }
-grails.mail.default.from = "info@enterprise-grails.com"
+
+if (!(Environment.current in [Environment.DEVELOPMENT, Environment.TEST])) {
+        grails.plugins.springsecurity.portMapper.httpPort = 80
+        grails.plugins.springsecurity.portMapper.httpsPort = 443
+        grails.plugins.springsecurity.secureChannel.useHeaderCheckChannelSecurity = true
+        grails.logging.jul.usebridge = false
+        grails.plugin.databasemigration.updateOnStart = true
+        grails.dbconsole.enabled = true
+}
 
 environments {
     development {
         grails.logging.jul.usebridge = true
-        // grails.mail.disabled = true
+        grails.mail.disabled = true
         // grails.mail.overrideAddress = "test@address.com"
     }
+    test {
+        grails.logging.jul.usebridge = true
+        grails.mail.disabled = true
+    }
+    stage {
+    }
     production {
-        grails.logging.jul.usebridge = false
-        grails.plugins.springsecurity.portMapper.httpPort = 80
-        grails.plugins.springsecurity.portMapper.httpsPort = 443
-        grails.plugins.springsecurity.secureChannel.useHeaderCheckChannelSecurity = true
-        grails.dbconsole.enabled = true
     }
 }
 

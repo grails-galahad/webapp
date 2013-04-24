@@ -15,16 +15,15 @@ class UserSpec extends Specification {
         user.validate()
         
         then:
-        user.errors.errorCount == 4
+        user.errors.errorCount == 3
         user.errors.hasFieldErrors 'fullName'
-        user.errors.hasFieldErrors 'username'
         user.errors.hasFieldErrors 'password'
         user.errors.hasFieldErrors 'email'
     }
     
     def "validate user with empty address"() {
         given:
-        def user = new User(username:'ronb', password:'asdf', fullName:'Ron Burgundy', email:'ronb@kvwn.net', address:new Address())
+        def user = new User(password:'asdf', fullName:'Ron Burgundy', email:'ronb@kvwn.net', address:new Address())
         
         when:
         user.validate()
@@ -39,7 +38,7 @@ class UserSpec extends Specification {
     
     def "validate a valid user"() {
         given:
-         def user = new User(username:'ronb', password:'asdf', fullName:'Ron Burgundy', email:'ronb@kvwn.net', address:new Address(
+         def user = new User(password:'asdf', fullName:'Ron Burgundy', email:'ronb@kvwn.net', address:new Address(
                 address1: '123 Street Rd.',
                 city: 'San Diego',
                 state: 'CA',

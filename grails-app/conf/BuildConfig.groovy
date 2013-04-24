@@ -11,6 +11,8 @@ grails.project.dependency.resolution = {
     log "error"
     checksums true
     legacyResolve false
+    
+    def seleniumVersion = "2.27.0"
 
     repositories {
         inherits true
@@ -23,12 +25,20 @@ grails.project.dependency.resolution = {
 
     dependencies {
         runtime "postgresql:postgresql:9.1-901.jdbc4"
+        test("org.seleniumhq.selenium:selenium-htmlunit-driver:$seleniumVersion") {
+			exclude "xml-apis"
+		}
+		test "org.seleniumhq.selenium:selenium-chrome-driver:$seleniumVersion"
+		test "org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion"
+		test "org.seleniumhq.selenium:selenium-support:$seleniumVersion"
         test "org.spockframework:spock-grails-support:0.7-groovy-2.0"
+        test "org.gebish:geb-spock:0.9.0-RC-3"
     }
 
     plugins {
         runtime ":hibernate:$grailsVersion"
 		runtime ":jquery:1.8.3"
+		runtime ":jquery-ui:1.8.24"
         runtime ":resources:1.2.RC2"
         runtime ":database-migration:1.3.2"
         runtime ":cache-headers:1.1.5"
@@ -44,12 +54,14 @@ grails.project.dependency.resolution = {
         compile(":heroku:1.0.1") {
             exclude 'database-session'
         }
-        compile ":cookie-session:2.0.5"
+        compile ":cookie-session:2.0.7"
         compile ":console:1.2"
         compile ":mail:1.0.1"
+        compile ":quartz:1.0-RC5"
         
         test(":spock:0.7") {
             exclude "spock-grails-support"
         }
+        test ":geb:0.9.0-RC-3"
     }
 }

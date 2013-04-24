@@ -1,5 +1,5 @@
 <head>
-    <meta name="layout" content="bootstrap"/>
+    <meta name="layout" content="main"/>
     <title>Oops - System Error</title>
 </head>
 

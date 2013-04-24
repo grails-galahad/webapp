@@ -1,19 +1,22 @@
 <%@ page import="org.codehaus.groovy.grails.web.servlet.GrailsApplicationAttributes" %>
 <%! import org.codehaus.groovy.grails.commons.GrailsClassUtils as GCU %>
 <!doctype html>
-<html lang="en">
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="" lang="en"> <!--<![endif]-->
+
 	<head>
 		<meta charset="utf-8">
 		<title><g:layoutTitle default="${meta(name: 'app.name')}"/></title>
 		<meta name="description" content="">
 		<meta name="author" content="">
 
-		<meta name="viewport" content="initial-scale = 1.0">
-
 		<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-		<!--[if lt IE 9]>
-			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
+        <!--[if lt IE 9]>
+            <script src="/js/html5shiv.js"></script>
+        <![endif]-->
 
 		<r:require modules="application"/>
 
@@ -26,7 +29,7 @@
 		<r:layoutResources/>
 	</head>
 
-	<body>
+	<body id="${pageProperty(name:'body.id')}" class="main ${pageProperty(name:'body.class')}">
 
 		<nav class="navbar navbar-fixed-top navbar-inverse">
 			<div class="navbar-inner">
@@ -59,7 +62,7 @@
                     <ul class="nav pull-right">
     					<sec:ifLoggedIn>
                             <li class="dropdown">
-                                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user icon-white"></i> <sec:loggedInUserInfo field="username" /><b class="caret"></b></a>
+                                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user icon-white"></i> <sec:loggedInUserInfo field="fullName" /><b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li><g:link controller="logout">Sign Out</g:link></li>
                                 </ul>

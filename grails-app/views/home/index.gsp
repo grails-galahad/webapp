@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 	<head>
-		<meta name="layout" content="bootstrap"/>
+		<meta name="layout" content="main"/>
 		<title>Galahad - ${meta(name: 'app.name')}</title>
 	</head>
 

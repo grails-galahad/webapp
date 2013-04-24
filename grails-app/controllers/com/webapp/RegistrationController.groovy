@@ -24,8 +24,7 @@ class RegistrationController {
         def roleUser = Role.findByAuthority('ROLE_USER')
         UserRole.create user, roleUser, true
         
-        springSecurityService.reauthenticate user.username
-        session['SPRING_SECURITY_CONTEXT'] = SecurityContextHolder.context // Workaround for cookie session issue
+        springSecurityService.reauthenticate user.email
         
         sendMail {
            to user.email
