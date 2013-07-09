@@ -19,6 +19,7 @@ grails.mime.types = [ html: ['text/html','application/xhtml+xml'],
                     ]
 
 grails.resources.adhoc.patterns = ['/images/*', '/css/*', '/js/*', '/plugins/*']
+grails.resources.mappers.lesscss.compress = true
 grails.views.default.codec = "none"
 grails.views.gsp.encoding = "UTF-8"
 grails.views.gsp.sitemesh.preprocess = true
