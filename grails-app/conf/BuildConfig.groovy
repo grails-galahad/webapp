@@ -54,7 +54,9 @@ grails.project.dependency.resolution = {
         compile(":heroku:1.0.1") {
             exclude 'database-session'
         }
-        compile ":cookie-session:2.0.7"
+        compile(":cookie-session:2.0.7") {
+            exclude 'asm'
+        }
         compile ":console:1.2"
         compile ":mail:1.0.1"
         compile ":quartz:1.0-RC5"

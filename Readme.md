@@ -28,21 +28,3 @@ Heroku Setup
 About Galahad
 -------------
 Named after Sir Galahad the Pure, Galahad is a collection of pristine Grails starter projects for specific use cases. Each project reflects a set of opinionated choices about design tradeoffs, plugins, testing methodologies, and 3rd party service providers (like hosting and email).
-
-
-TODO
-----
-* Upgrade grails and groovy
-* Auto-generate ImageResources.groovy
-* Rename people table to person
-* Remove Project and Tasks (during init, or altogether)
-* Google analytics
-* Geb tests
-* DB migration
-* Mailchimp integration
-* Sign up button in main nav
-* Task list on project edit is misaligned
-* Dropdown login form
-* Test nav bar collapse
-* Password change
-* Look for minifier that works with Less CSS plugin
