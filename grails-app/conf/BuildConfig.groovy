@@ -48,7 +48,7 @@ grails.project.dependency.resolution = {
         build ":tomcat:$grailsVersion"
 		
 		compile ":cache:1.0.1"
-		compile ":lesscss-resources:1.3.1"
+		compile ":lesscss-resources:1.3.3"
         compile ":fields:1.3"
         compile ":spring-security-core:1.2.7.3"
         compile(":heroku:1.0.1") {
