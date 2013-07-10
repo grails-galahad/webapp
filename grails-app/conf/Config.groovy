@@ -88,12 +88,12 @@ grails {
 }
 
 if (!(Environment.current in [Environment.DEVELOPMENT, Environment.TEST])) {
-        grails.plugins.springsecurity.portMapper.httpPort = 80
-        grails.plugins.springsecurity.portMapper.httpsPort = 443
-        grails.plugins.springsecurity.secureChannel.useHeaderCheckChannelSecurity = true
-        grails.logging.jul.usebridge = false
-        grails.plugin.databasemigration.updateOnStart = true
-        grails.dbconsole.enabled = true
+    grails.plugins.springsecurity.portMapper.httpPort = 80
+    grails.plugins.springsecurity.portMapper.httpsPort = 443
+    grails.plugins.springsecurity.secureChannel.useHeaderCheckChannelSecurity = true
+    grails.logging.jul.usebridge = false
+    grails.plugin.databasemigration.updateOnStart = true
+    grails.dbconsole.enabled = true
 }
 
 environments {

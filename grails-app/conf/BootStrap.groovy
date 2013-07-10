@@ -17,7 +17,7 @@ class BootStrap {
             
             def users = [
                     ronb: ['Ron Burgundy', 'ronb@kvwn.net', 'Apt. 1A'],
-                    brianf: ['Brian Fantana', 'brinaf@kvwn.net', 'Apt. 1B'],
+                    brianf: ['Brian Fantana', 'brianf@kvwn.net', 'Apt. 1B'],
                     brickt: ['Brick Tamland', 'brickt@kvwn.net', 'Apt. 1C']
                     ]
         
