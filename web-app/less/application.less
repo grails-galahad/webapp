@@ -48,16 +48,6 @@ footer {
     }    
 }
 
-.page-bottom {
-    background-color: #fff;
-    height: 40px;
-    margin-top: -30px;
-    margin-bottom: 40px;
-    width: @gridRowWidth + 40;
-    .border-radius(0 0 8px 8px);
-    .box-shadow(0 5px 10px rgba(0,0,0,.2));
-}
-
 /* General */
 .text-xlarge {
     font-size: 1.8em;
@@ -121,6 +111,28 @@ thead {
 dt,
 dd {
   line-height: @baseLineHeight + 5px;
+}
+
+.controls {
+    ul {
+        margin: 5px 0 5px 25px;
+    }
+}
+
+input[type="checkbox"], input[type="radio"] {
+    margin-top: 7px;
+}
+
+label {
+    input[type="checkbox"], input[type="radio"] {
+        margin-top: 4px;
+    }
+}
+
+.input-append, .input-prepend {
+    input {
+        width: 178px;
+    }
 }
 
 /* Home */

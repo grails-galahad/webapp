@@ -96,7 +96,6 @@
 		</div>
 		
 		<footer class="footer-inverse">
-		    <div class="container page-bottom"></div>
 		    <div class="container">
 		        <div class="row">
 		            <div class="col-centered span8 offset2">

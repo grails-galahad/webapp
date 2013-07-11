@@ -52,7 +52,7 @@
 				</g:hasErrors>
 
 				<fieldset>
-					<g:form class="form-horizontal" action="create" <%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
+					<g:form class="form-horizontal" action="save" <%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
 						<fieldset>
 					        <f:with bean="${propertyName}">
 						    <%  excludedProps = Event.allEvents.toList() << 'id' << 'version'
