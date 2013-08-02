@@ -13,7 +13,7 @@
         		</g:if>
 		
                 <form class="form-signin" action="${postUrl}" method="POST" autocomplete="off">
-                    <h2 class="form-signin-heading">Please sign in</h2>
+                    <h2>Please sign in</h2>
                     <fieldset>
                         <input type="text" class="input-block-level" name="j_username" placeholder="Email" autofocus>
                         <input type="password" class="input-block-level" name="j_password" placeholder="Password">

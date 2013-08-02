@@ -16,9 +16,9 @@ class BootStrap {
             assert roleAdmin
             
             def users = [
-                    ronb: ['Ron Burgundy', 'ronb@kvwn.net', 'Apt. 1A'],
-                    brianf: ['Brian Fantana', 'brianf@kvwn.net', 'Apt. 1B'],
-                    brickt: ['Brick Tamland', 'brickt@kvwn.net', 'Apt. 1C']
+                    ronb: ['Ron Burgundy', 'ronb@asdf.com', 'Apt. 1A'],
+                    brianf: ['Brian Fantana', 'brianf@asdf.com', 'Apt. 1B'],
+                    brickt: ['Brick Tamland', 'brickt@asdf.com', 'Apt. 1C']
                     ]
         
             users.each { uname, data ->
@@ -38,7 +38,7 @@ class BootStrap {
         }
     
         if (!Project.count()) {
-            def ronb = User.findByEmail('ronb@kvwn.net')
+            def ronb = User.findByEmail('ronb@asdf.com')
             assert ronb
             
             def p1 = new Project(name:"Galahad Webapp", owner:ronb)
