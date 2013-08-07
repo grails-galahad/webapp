@@ -2,7 +2,6 @@ modules = {
     application {
         defaultBundle 'monolith'
         dependsOn 'jquery, jquery-ui, bootstrap-js'
-        resource url: 'js/bootstrap-datepicker.js'
         resource url: 'js/spin.min.js'
         resource url: 'js/jquery.spin.js'
         resource url: 'js/modernizr.min.js'
