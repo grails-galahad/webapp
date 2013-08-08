@@ -32,7 +32,6 @@ footer {
         color: @gray;
         text-shadow: none;
     }
-    
     &.footer-inverse {
         background-color: #5c5c5c;
         color: #ccc;
@@ -41,7 +40,6 @@ footer {
             color: #ccc;
         }
     }
-    
     .copy {
         margin-top: 30px
     }    
@@ -107,9 +105,25 @@ thead {
     }
 }
 
-dt,
-dd {
-  line-height: @baseLineHeight + 5px;
+dl {
+    p {
+        margin: 0 0 20px 0;
+    }
+    dt, dd {
+        line-height: @baseLineHeight + 5px;
+    }
+}
+
+div.field {
+    margin-top: 10px;
+    dt {
+        float: left;
+        text-align: right;
+        width: 120px;
+    }
+    dd {
+        margin-left: 150px;
+    }
 }
 
 .controls {
@@ -137,7 +151,6 @@ label {
 /* Home */
 .billboard {
     height: 360px;
-    
     img {
         position: absolute;
         top: 0;
@@ -146,20 +159,17 @@ label {
         min-width: 100%;
         z-index: -1;
     }
-    
     .billboard-caption {
         background-color: transparent;
         max-width: 550px;
         padding: 0 20px;
         margin-top: 100px;
-        
         h1, .lead {
             margin: 0;
             line-height: 1.25;
             color: #fff;
             text-shadow: 0 1px 1px rgba(0,0,0,.4);
         }
-        
         h1 {
             font-size: 5em;
         }

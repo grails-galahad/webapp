@@ -40,7 +40,7 @@
 				<g:if test="\${flash.message}">
 				<bootstrap:alert class="alert-info">\${flash.message}</bootstrap:alert>
 				</g:if>
-
+                
 				<dl>
 				<%  excludedProps = Event.allEvents.toList() << 'id' << 'version'
 				    if (GCU.isStaticProperty(domainClass.clazz, 'views')) excludedProps += domainClass.clazz.views?.show?.excludes ?: []
