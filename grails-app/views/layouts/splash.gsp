@@ -30,8 +30,8 @@
 		<r:layoutResources/>
 	</head>
 
-	<body id="${pageProperty(name:'body.id')}" class="main ${pageProperty(name:'body.class')}">
-
+	<body id="${pageProperty(name:'body.id')}" class="splash ${pageProperty(name:'body.class')}">
+        
         <g:render template="/shared/navbar" />
 
 		<div class="container main">

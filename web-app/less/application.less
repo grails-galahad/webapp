@@ -1,7 +1,7 @@
 @import "../bootstrap/less/bootstrap.less";
 @import "variables.less";
 
-/* Layout */
+/* Main Layout */
 body { 
 	padding-top: 60px; 
 }
@@ -27,15 +27,12 @@ footer {
     color: @gray;
     margin: 60px 0 0 0;
     padding: 30px 0 20px 0;
-    text-shadow: 0 1px 0 #fff;
     a, a:hover {
         color: @gray;
-        text-shadow: none;
     }
     &.footer-inverse {
         background-color: #5c5c5c;
         color: #ccc;
-        text-shadow: 1px 1px 3px rgba(0,0,0,.4);
         a, a:hover {
             color: #ccc;
         }
@@ -54,14 +51,19 @@ footer {
     text-align: center;
 }
 
-.col-inner {
-    text-align: left;
-    display: inline-block;
-}
-
 .nav-separator {
     color: @grayLight;
     padding: 0 5px;
+}
+
+.linkbar {
+    a {
+        padding: 0 12px;
+        border-left: 1px dotted @grayLight;
+        &:first-child {
+            border: none;
+        }
+    }
 }
 
 /* Scaffolding */
@@ -168,7 +170,6 @@ label {
             margin: 0;
             line-height: 1.25;
             color: #fff;
-            text-shadow: 0 1px 1px rgba(0,0,0,.4);
         }
         h1 {
             font-size: 5em;
