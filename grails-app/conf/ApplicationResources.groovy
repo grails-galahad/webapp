@@ -11,6 +11,13 @@ modules = {
         resource url: 'css/bootstrap-datetimepicker.min.css'
         resource url: 'css/dummy.css'
     }
+    
+    images {
+        resource url: 'images/apple-touch-icon-retina.png'
+        resource url: 'images/apple-touch-icon.png'
+        resource url: 'images/billboard.jpg'
+        resource url: 'images/favicon.ico'
+    }
 
     overrides {
         jquery {
