@@ -1,3 +1,5 @@
+<%! import org.codehaus.groovy.grails.commons.GrailsClassUtils as GCU %>
+
 <nav class="navbar navbar-fixed-top navbar-inverse">
 	<div class="navbar-inner">
 		<div class="container">
