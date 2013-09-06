@@ -18,7 +18,9 @@ grails.mime.types = [ html: ['text/html','application/xhtml+xml'],
                       multipartForm: 'multipart/form-data'
                     ]
 
-grails.resources.adhoc.patterns = ['/images/*', '/css/*', '/js/*', '/plugins/*']
+grails.resources.adhoc.patterns = []
+grails.resources.adhoc.includes = [] 
+grails.resources.adhoc.excludes = ["*"]
 grails.resources.mappers.lesscss.compress = true
 grails.views.default.codec = "none"
 grails.views.gsp.encoding = "UTF-8"

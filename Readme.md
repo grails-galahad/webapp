@@ -40,6 +40,10 @@ SSL and custom domain
     heroku certs:add -a myapp src/security/myapp.crt src/security/myapp.key
     heroku domains:add -a myapp www.myapp.com
 
+Pre-boot (zero downtime deploys)
+
+    heroku labs:enable -a myapp preboot
+
 Monitoring and log alerts
 
     heroku addons:add -a myapp newrelic:standard
