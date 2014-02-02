@@ -1,30 +1,50 @@
 import grails.util.Environment
 
 grails.app.context = '/'
-grails.project.groupId = "com.$appName"
-grails.mime.file.extensions = true
-grails.mime.use.accept.header = false
-grails.mime.types = [ html: ['text/html','application/xhtml+xml'],
-                      xml: ['text/xml', 'application/xml'],
-                      text: 'text/plain',
-                      js: 'text/javascript',
-                      rss: 'application/rss+xml',
-                      atom: 'application/atom+xml',
-                      css: 'text/css',
-                      csv: 'text/csv',
-                      all: '*/*',
-                      json: ['application/json','text/json'],
-                      form: 'application/x-www-form-urlencoded',
-                      multipartForm: 'multipart/form-data'
-                    ]
+// grails.project.groupId = "com.$appName"
+grails.project.groupId = appName
+// grails.mime.file.extensions = true
+// grails.mime.use.accept.header = false
+grails.mime.disable.accept.header.userAgents = ['Gecko', 'WebKit', 'Presto', 'Trident']
+grails.mime.types = [
+    all:           '*/*',
+    atom:          'application/atom+xml',
+    css:           'text/css',
+    csv:           'text/csv',
+    form:          'application/x-www-form-urlencoded',
+    html:          ['text/html','application/xhtml+xml'],
+    js:            'text/javascript',
+    json:          ['application/json', 'text/json'],
+    multipartForm: 'multipart/form-data',
+    rss:           'application/rss+xml',
+    text:          'text/plain',
+    hal:           ['application/hal+json','application/hal+xml'],
+    xml:           ['text/xml', 'application/xml']
+]
 
 grails.resources.adhoc.patterns = []
 grails.resources.adhoc.includes = [] 
 grails.resources.adhoc.excludes = ["*"]
 grails.resources.mappers.lesscss.compress = true
-grails.views.default.codec = "none"
-grails.views.gsp.encoding = "UTF-8"
-grails.views.gsp.sitemesh.preprocess = true
+grails.views.default.codec = "html"
+grails.controllers.defaultScope = 'singleton'
+
+grails {
+    views {
+        gsp {
+            encoding = 'UTF-8'
+            htmlcodec = 'xml'
+            codecs {
+                expression = 'html'
+                scriptlet = 'html'
+                taglib = 'none'
+                staticparts = 'none'
+            }
+        }
+    }
+}
+
+// grails.views.gsp.sitemesh.preprocess = true
 grails.converters.encoding = "UTF-8"
 grails.scaffolding.templates.domainSuffix = 'Instance'
 grails.json.legacy.builder = false

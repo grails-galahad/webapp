@@ -1,12 +1,20 @@
-grails.servlet.version = "2.5"
+grails.servlet.version = "3.0"
 grails.project.class.dir = "target/classes"
 grails.project.test.class.dir = "target/test-classes"
 grails.project.test.reports.dir = "target/test-reports"
+grails.project.work.dir = "target/work"
 grails.project.source.level = 1.6
 grails.project.target.level = 1.6
 
+grails.project.fork = [
+    test: [maxMemory: 768, minMemory: 64, debug: false, maxPerm: 256, daemon:true],
+    run: [maxMemory: 768, minMemory: 64, debug: false, maxPerm: 256, forkReserve:false],
+    war: [maxMemory: 768, minMemory: 64, debug: false, maxPerm: 256, forkReserve:false],
+    console: [maxMemory: 768, minMemory: 64, debug: false, maxPerm: 256]
+]
+
+grails.project.dependency.resolver = "maven"
 grails.project.dependency.resolution = {
-	
     inherits "global"
     log "error"
     checksums true
@@ -18,9 +26,10 @@ grails.project.dependency.resolution = {
         inherits true
         grailsPlugins()
         grailsHome()
-        grailsCentral()
         mavenLocal()
+        grailsCentral()
         mavenCentral()
+		mavenRepo "http://repo.spring.io/milestone/"
     }
 
     dependencies {
@@ -31,39 +40,36 @@ grails.project.dependency.resolution = {
 		test "org.seleniumhq.selenium:selenium-chrome-driver:$seleniumVersion"
 		test "org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion"
 		test "org.seleniumhq.selenium:selenium-support:$seleniumVersion"
-        test "org.spockframework:spock-grails-support:0.7-groovy-2.0"
-        test "org.gebish:geb-spock:0.9.0-RC-3"
+		test "org.gebish:geb-spock:0.9.2"
     }
 
     plugins {
-        runtime ":hibernate:$grailsVersion"
-		runtime ":jquery:1.8.3"
-		runtime ":jquery-ui:1.8.24"
-        runtime ":resources:1.2.RC2"
-        runtime ":database-migration:1.3.2"
-        runtime ":cache-headers:1.1.5"
-        runtime ":cached-resources:1.0"
-        runtime ":zipped-resources:1.0"
+		build ":tomcat:7.0.50"
 		
-        build ":tomcat:$grailsVersion"
-		
-		compile ":cache:1.0.1"
+        compile ":scaffolding:2.0.1"
+        compile ':cache:1.1.1'
 		compile ":lesscss-resources:1.3.3"
         compile ":fields:1.3"
-        compile ":spring-security-core:1.2.7.3"
+        compile ":spring-security-core:2.0-RC2"
         compile(":heroku:1.0.1") {
             exclude 'database-session'
         }
-        compile(":cookie-session:2.0.7") {
-            exclude 'asm'
+        compile(":cookie-session:2.0.13") {
+            // exclude 'asm'
         }
-        compile ":console:1.2"
+        compile ":console:1.3"
         compile ":mail:1.0.1"
-        compile ":quartz:1.0-RC5"
+        compile ":quartz:1.0.1"
+
+        runtime ":hibernate:3.6.10.7" // or ":hibernate4:4.1.11.6"
+        runtime ":database-migration:1.3.8"
+        runtime ":jquery:1.10.2.2"
+		runtime ":jquery-ui:1.10.3"
+        runtime ":resources:1.2.1"
+        runtime ":cache-headers:1.1.5"
+        runtime ":cached-resources:1.1"
+        runtime ":zipped-resources:1.0.1"
         
-        test(":spock:0.7") {
-            exclude "spock-grails-support"
-        }
-        test ":geb:0.9.0-RC-3"
+		test ":geb:0.9.2"
     }
 }
