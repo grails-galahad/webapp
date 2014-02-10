@@ -7,7 +7,7 @@ class RegistrationController {
     def springSecurityService
     
     def index() {
-        [user:new User()]
+        respond new User()
     }
     
     def save() {
