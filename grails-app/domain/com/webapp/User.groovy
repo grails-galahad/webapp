@@ -16,6 +16,7 @@ class User {
 	Address address
 	
 	static embedded = ["address"]
+	static transients = ['springSecurityService']
 
 	static constraints = {
 		fullName blank: false

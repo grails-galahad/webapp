@@ -55,7 +55,7 @@ grails.exceptionresolver.params.exclude = ['password']
 grails.hibernate.cache.queries = false
 
 grails {
-    plugins {
+    plugin {
         springsecurity {
             userLookup {
                 userDomainClassName = 'com.webapp.User'
@@ -68,21 +68,28 @@ grails {
                 key = 'webapp'
             }
             controllerAnnotations.staticRules = [
-			   "/console/**": ["ROLE_ADMIN"],
-			   "/dbconsole/**": ["ROLE_ADMIN"]
+				'/':                              ['permitAll'],
+				'/index':                         ['permitAll'],
+				'/index.gsp':                     ['permitAll'],
+				'/**/js/**':                      ['permitAll'],
+				'/**/css/**':                     ['permitAll'],
+				'/**/images/**':                  ['permitAll'],
+				'/**/favicon.ico':                ['permitAll'],
+				'/login/**': 	                  ['permitAll'],
+				'/logout/**': 	                  ['permitAll'],
+				"/console/**": 					  ["ROLE_ADMIN"],
+				"/dbconsole/**": 				  ["ROLE_ADMIN"]
 			]
             secureChannel.definition = [
-               '/registration/**': 'REQUIRES_SECURE_CHANNEL',
-               '/login/**': 'REQUIRES_SECURE_CHANNEL',
-               '/project/**': 'REQUIRES_SECURE_CHANNEL',
-               '/task/**': 'REQUIRES_SECURE_CHANNEL',
-               '/user/**': 'REQUIRES_SECURE_CHANNEL',
-               '/console/**': 'REQUIRES_SECURE_CHANNEL',
-               '/dbconsole/**': 'REQUIRES_SECURE_CHANNEL'
+				'/registration/**': 			  'REQUIRES_SECURE_CHANNEL',
+				'/login/**': 					  'REQUIRES_SECURE_CHANNEL',
+				'/project/**': 					  'REQUIRES_SECURE_CHANNEL',
+				'/task/**': 					  'REQUIRES_SECURE_CHANNEL',
+				'/user/**': 					  'REQUIRES_SECURE_CHANNEL',
+				'/console/**': 					  'REQUIRES_SECURE_CHANNEL',
+				'/dbconsole/**': 				  'REQUIRES_SECURE_CHANNEL'
             ]
         }
-    }
-    plugin {
         databasemigration {
             updateOnStartFileNames = ['changelog.groovy']
             dbDocController.enabled = false
@@ -110,9 +117,9 @@ grails {
 }
 
 if (!(Environment.current in [Environment.DEVELOPMENT, Environment.TEST])) {
-    grails.plugins.springsecurity.portMapper.httpPort = 80
-    grails.plugins.springsecurity.portMapper.httpsPort = 443
-    grails.plugins.springsecurity.secureChannel.useHeaderCheckChannelSecurity = true
+    grails.plugin.springsecurity.portMapper.httpPort = 80
+    grails.plugin.springsecurity.portMapper.httpsPort = 443
+    grails.plugin.springsecurity.secureChannel.useHeaderCheckChannelSecurity = true
     grails.logging.jul.usebridge = false
     grails.plugin.databasemigration.updateOnStart = true
     grails.dbconsole.enabled = true
