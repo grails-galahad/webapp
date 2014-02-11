@@ -1,8 +1,8 @@
 package com.webapp
 
-import org.codehaus.groovy.grails.plugins.springsecurity.GrailsUser
-import org.codehaus.groovy.grails.plugins.springsecurity.GrailsUserDetailsService
-import org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils
+import grails.plugin.springsecurity.userdetails.GrailsUser
+import grails.plugin.springsecurity.userdetails.GrailsUserDetailsService
+import grails.plugin.springsecurity.SpringSecurityUtils
 import org.springframework.security.core.authority.GrantedAuthorityImpl
 import org.springframework.security.core.userdetails.UserDetails
 import org.springframework.security.core.userdetails.UsernameNotFoundException

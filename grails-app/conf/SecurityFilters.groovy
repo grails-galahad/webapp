@@ -1,4 +1,4 @@
-import org.springframework.security.web.util.AntUrlPathMatcher
+import org.springframework.util.AntPathMatcher
 
 class SecurityFilters {
     
@@ -16,20 +16,20 @@ class SecurityFilters {
     }
     
     private boolean requiresHttps(String url) {
-        def secureDefs = grailsApplication.config.grails.plugins.springsecurity.secureChannel.definition
+        def secureDefs = grailsApplication.config.grails.plugin.springsecurity.secureChannel.definition
         
         if (secureDefs) {
             def securePaths = secureDefs.findAll { it.value == 'REQUIRES_SECURE_CHANNEL' }.collect { it.key }
-            def urlMatcher = new AntUrlPathMatcher(true)
+            def pathMatcher = new AntPathMatcher()
             securePaths.each { path ->
-                if (urlMatcher.pathMatchesUrl(path, url)) return true
+                if (pathMatcher.match(path, url)) return true
             }
         }
     }
     
     private String convertToHttps(String url) {
-        def httpPort = grailsApplication.config.grails.plugins.springsecurity.portMapper.httpPort ?: 8080
-        def httpsPort = grailsApplication.config.grails.plugins.springsecurity.portMapper.httpsPort ?: 8443
+        def httpPort = grailsApplication.config.grails.plugin.springsecurity.portMapper.httpPort ?: 8080
+        def httpsPort = grailsApplication.config.grails.plugin.springsecurity.portMapper.httpsPort ?: 8443
         url.replace('http://', 'https://').replace(":${httpPort}", ":${httpsPort}")
     }
 }
