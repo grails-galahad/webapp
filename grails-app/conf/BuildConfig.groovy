@@ -44,7 +44,8 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
-		build ":tomcat:7.0.50"
+		// build ":tomcat:7.0.50" // run-app blows up with -https
+		build ":tomcat:7.0.47"
 		
         compile ":scaffolding:2.0.1"
         compile ':cache:1.1.1'

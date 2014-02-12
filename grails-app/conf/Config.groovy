@@ -1,10 +1,7 @@
 import grails.util.Environment
 
 grails.app.context = '/'
-// grails.project.groupId = "com.$appName"
-grails.project.groupId = appName
-// grails.mime.file.extensions = true
-// grails.mime.use.accept.header = false
+grails.project.groupId = "com.$appName"
 grails.mime.disable.accept.header.userAgents = ['Gecko', 'WebKit', 'Presto', 'Trident']
 grails.mime.types = [
     all:           '*/*',
@@ -44,7 +41,6 @@ grails {
     }
 }
 
-// grails.views.gsp.sitemesh.preprocess = true
 grails.converters.encoding = "UTF-8"
 grails.scaffolding.templates.domainSuffix = 'Instance'
 grails.json.legacy.builder = false
@@ -67,16 +63,9 @@ grails {
                 cookieName = 'webapp_remember_me'
                 key = 'webapp'
             }
+			rejectIfNoRule = false
+			fii.rejectPublicInvocations = false
             controllerAnnotations.staticRules = [
-				'/':                              ['permitAll'],
-				'/index':                         ['permitAll'],
-				'/index.gsp':                     ['permitAll'],
-				'/**/js/**':                      ['permitAll'],
-				'/**/css/**':                     ['permitAll'],
-				'/**/images/**':                  ['permitAll'],
-				'/**/favicon.ico':                ['permitAll'],
-				'/login/**': 	                  ['permitAll'],
-				'/logout/**': 	                  ['permitAll'],
 				"/console/**": 					  ["ROLE_ADMIN"],
 				"/dbconsole/**": 				  ["ROLE_ADMIN"]
 			]
@@ -143,6 +132,6 @@ environments {
 
 log4j = {
     appenders {
-       'null' name:"stacktrace"
+       // 'null' name:"stacktrace"
     }
 }

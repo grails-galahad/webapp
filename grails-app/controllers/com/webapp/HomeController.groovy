@@ -4,7 +4,7 @@ class HomeController {
 
 	def springSecurityService
 
-	def index = {
+	def index() {
 		if (springSecurityService.isLoggedIn()) {
 			redirect controller:"project"
 		} else {
