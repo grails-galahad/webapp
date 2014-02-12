@@ -16,10 +16,10 @@
 				<bootstrap:alert class="alert-info">${flash.message}</bootstrap:alert>
 				</g:if>
 
-				<g:hasErrors bean="${user}">
+				<g:hasErrors bean="${userInstance}">
 				<bootstrap:alert class="alert-error">
 				<ul>
-					<g:eachError bean="${user}" var="error">
+					<g:eachError bean="${userInstance}" var="error">
 					<li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
 					</g:eachError>
 				</ul>
@@ -29,7 +29,7 @@
 				<fieldset>
 					<g:form class="form-horizontal" action="save">
 						<fieldset>
-					        <f:with bean="${user}">
+					        <f:with bean="${userInstance}">
                                 <f:field property="fullName" />
                                 <f:field property="email" />
                                 <f:field property="password" />

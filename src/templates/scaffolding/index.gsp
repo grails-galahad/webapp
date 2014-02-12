@@ -79,7 +79,7 @@
 					</tbody>
 				</table>
 				<div class="pagination">
-					<bootstrap:paginate total="\${${propertyName}Total}" />
+					<bootstrap:paginate total="\${${propertyName}Count ?: 0}" />
 				</div>
 			</div>
 

@@ -6,7 +6,12 @@ class UrlMappings {
 			}
 		}
 
-		"/"(controller:"home")
+		"/"(controller:'home')
+		"/registration"(controller:'registration')
+		"/projects"(resources:'project')
+		"/tasks"(resources:'task')
+		"/users"(resources:'user')
+		
 		"403"(view:'/errors/403')
 		"404"(view:'/errors/404')
 		"500"(view:'/errors/500')

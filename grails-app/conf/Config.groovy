@@ -33,7 +33,7 @@ grails {
             htmlcodec = 'xml'
             codecs {
                 expression = 'html'
-                scriptlet = 'html'
+                scriptlet = 'none'
                 taglib = 'none'
                 staticparts = 'none'
             }
