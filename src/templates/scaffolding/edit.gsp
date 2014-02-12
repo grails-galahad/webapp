@@ -16,7 +16,7 @@
 					<ul class="nav nav-list">
 						<li class="nav-header">\${entityName}</li>
 						<li>
-							<g:link class="list" action="list">
+							<g:link class="list" action="index">
 								<i class="icon-list"></i>
 								<g:message code="default.list.label" args="[entityName]" />
 							</g:link>
