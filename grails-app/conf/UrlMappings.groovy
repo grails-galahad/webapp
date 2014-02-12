@@ -8,6 +8,8 @@ class UrlMappings {
 
 		"/"(controller:'home')
 		"/registration"(controller:'registration')
+		"/login"(controller:'login')
+		"/logout"(controller:'logout')
 		"/projects"(resources:'project')
 		"/tasks"(resources:'task')
 		"/users"(resources:'user')

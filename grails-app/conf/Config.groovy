@@ -65,6 +65,7 @@ grails {
             }
 			rejectIfNoRule = false
 			fii.rejectPublicInvocations = false
+			logout.postOnly = false
             controllerAnnotations.staticRules = [
 				"/console/**": 					  ["ROLE_ADMIN"],
 				"/dbconsole/**": 				  ["ROLE_ADMIN"]
