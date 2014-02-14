@@ -59,6 +59,13 @@
 						    <%  excludedProps = Event.allEvents.toList() << 'id' << 'version'
             				    if (GCU.isStaticProperty(domainClass.clazz, 'views')) excludedProps += domainClass.clazz.views?.edit?.excludes ?: []
             					allowedNames = domainClass.persistentProperties*.name << 'dateCreated' << 'lastUpdated'
+								boolean hasHibernate = pluginManager?.hasGrailsPlugin('hibernate') || pluginManager?.hasGrailsPlugin('hibernate4')
+								if (hasHibernate) {
+									def GrailsDomainBinder = getClass().classLoader.loadClass('org.codehaus.groovy.grails.orm.hibernate.cfg.GrailsDomainBinder')
+									if (GrailsDomainBinder.newInstance().getMapping(domainClass)?.identity?.generator == 'assigned') {
+										allowedNames << domainClass.identifier.name
+									}
+								}
             					if (GCU.isStaticProperty(domainClass.clazz, 'views') && domainClass.clazz.views?.edit?.includes) {
             					    allowedNames.retainAll(domainClass.clazz.views.edit.includes)
             					    excludedProps.removeAll(domainClass.clazz.views.edit.includes)

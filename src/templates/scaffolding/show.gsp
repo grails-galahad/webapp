@@ -60,8 +60,7 @@
 				<%  } %>
 				</dl>
 
-				<g:form>
-					<g:hiddenField name="id" value="\${${propertyName}?.id}" />
+				<g:form url="[resource:${propertyName}, action:'delete']" method="DELETE">
 					<div class="form-actions">
 						<g:link class="btn" action="edit" id="\${${propertyName}?.id}">
 							<i class="icon-pencil"></i>
