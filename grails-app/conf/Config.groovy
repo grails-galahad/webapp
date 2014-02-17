@@ -25,6 +25,7 @@ grails.resources.adhoc.excludes = ["*"]
 grails.resources.mappers.lesscss.compress = true
 grails.views.default.codec = "html"
 grails.controllers.defaultScope = 'singleton'
+grails.databinding.dateFormats = ['MM/dd/yyyy hh:mm a', 'MM/dd/yyyy']
 
 grails {
     views {

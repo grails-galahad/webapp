@@ -14,7 +14,7 @@ class Task {
         descr blank:false
         due nullable:true
     }
-    
+	
     static views = [
 	    list: [includes:['descr', 'due']],
 	    show: [excludes:['lastUpdated']],

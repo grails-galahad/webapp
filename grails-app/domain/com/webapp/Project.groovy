@@ -12,7 +12,11 @@ class Project {
     static constraints = {
         name blank:false
     }
-    
+	
+	static mapping = {
+		tasks sort:'id'
+	}
+	
     static views = [
 	    list: [includes:['name', 'owner']],
 	    show: [excludes:['lastUpdated']],

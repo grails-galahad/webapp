@@ -53,9 +53,7 @@
 					Collections.sort(props, comparator.constructors[0].newInstance([domainClass] as Object[]))
 					props.each { p -> %>
 					
-					<g:if test="\${${propertyName}?.${p.name}}">
 					<f:display bean="\${${propertyName}}" property="${p.name}"/>
-					</g:if>
 					
 				<%  } %>
 				</dl>
