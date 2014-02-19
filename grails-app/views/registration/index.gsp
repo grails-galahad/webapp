@@ -7,7 +7,7 @@
 
 	<body>
 	    <div class="row">
-	        <div class="span8 offset2">
+	        <div class="col-md-8 col-md-offset-2">
         	    <div class="page-header">
             	    <h1>Sign Up</h1>
         	    </div>
@@ -30,12 +30,12 @@
 					<g:form class="form-horizontal" action="save">
 						<fieldset>
 					        <f:with bean="${userInstance}">
-                                <f:field property="fullName" />
-                                <f:field property="email" />
-                                <f:field property="password" />
+                                <f:field property="fullName" input-class="form-control"/>
+                                <f:field property="email" input-class="form-control"/>
+                                <f:field property="password" input-class="form-control"/>
                             </f:with>
                             
-                            <div class="control-group">
+                            <div class="form-group">
                                 <div class="controls">
                                 	<label id="terms-check" class="checkbox">
                                 	    I accept the <a href="javascript:void(0)">terms of use</a>

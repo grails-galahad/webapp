@@ -10,8 +10,8 @@
 		<p>Sorry, the service is currently unavailable. Please try again later.</p>
 		
 		<div class="actions">
-			<a href="./" class="btn btn-large btn-primary">
-				<i class="icon-chevron-left icon-white"></i>
+			<a href="./" class="btn btn-lg btn-primary">
+				<i class="glyphicon glyphicon-chevron-left"></i>
 				Back to Home
 			</a>
 		</div>

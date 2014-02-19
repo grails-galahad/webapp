@@ -9,7 +9,7 @@ class BootstrapTagLib {
 	static namespace = "bootstrap"
 	
 	def alert = { attrs, body ->
-		out << '<div class="alert alert-block ' << attrs.class.tokenize().join(" ") << '">'
+		out << '<div class="alert' << attrs.class.tokenize().join(" ") << '">'
 		out << '<a class="close" data-dismiss="alert">&times;</a>'
 		out << '<p>' << body() << '</p>'
 		out << '</div>'
@@ -67,7 +67,7 @@ class BootstrapTagLib {
 			writer << '>'
 			def prevLinkAttrs = linkTagAttrs.clone()
 			prevLinkAttrs += [title: (attrs.prev ?: messageSource.getMessage('paginate.prev', null, messageSource.getMessage('default.paginate.prev', null, 'Previous', locale), locale))]
-			writer << link(prevLinkAttrs, '<i class="icon-chevron-left"></i>')
+			writer << link(prevLinkAttrs, '<i class="glyphicon glyphicon-chevron-left"></i>')
 			writer << '</li>'
 		}
 
@@ -107,7 +107,7 @@ class BootstrapTagLib {
 			writer << '>'
 			def nextLinkAttrs = linkTagAttrs.clone()
 			nextLinkAttrs += [title: (attrs.next ? attrs.next : messageSource.getMessage('paginate.next', null, messageSource.getMessage('default.paginate.next', null, 'Next', locale), locale))]
-			writer << link(nextLinkAttrs, '<i class="icon-chevron-right"></i>')
+			writer << link(nextLinkAttrs, '<i class="glyphicon glyphicon-chevron-right"></i>')
 			writer << '</li>'
 		}
 		

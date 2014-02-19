@@ -1,1 +1,1 @@
-<textarea id="${property}" name="${property}">${value}</textarea>
+<textarea class="form-control" id="${property}" name="${property}">${value}</textarea>

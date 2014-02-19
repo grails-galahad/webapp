@@ -1,5 +1,5 @@
-<div class="input-prepend">
-	<span class="add-on"><i class="icon-lock"></i></span>
+<div class="input-group">
+	<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
 <%
 	def attrs = [type: 'password', name: property, value: value]
 	if (required) attrs.required = ''

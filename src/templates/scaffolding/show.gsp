@@ -11,19 +11,19 @@
 	<body>
 		<div class="row">
 			
-			<div class="span3">
+			<div class="col-md-3">
 				<div class="well">
 					<ul class="nav nav-list">
 						<li class="nav-header">\${entityName}</li>
 						<li>
 							<g:link class="list" action="index">
-								<i class="icon-list"></i>
+								<i class="glyphicon glyphicon-list"></i>
 								<g:message code="default.list.label" args="[entityName]" />
 							</g:link>
 						</li>
 						<li>
 							<g:link class="create" action="create">
-								<i class="icon-plus"></i>
+								<i class="glyphicon glyphicon-plus"></i>
 								<g:message code="default.create.label" args="[entityName]" />
 							</g:link>
 						</li>
@@ -31,7 +31,7 @@
 				</div>
 			</div>
 			
-			<div class="span9">
+			<div class="col-md-9">
 
 				<div class="page-header">
 					<h1><g:message code="default.show.label" args="[entityName]" /></h1>
@@ -60,12 +60,12 @@
 
 				<g:form url="[resource:${propertyName}, action:'delete']" method="DELETE">
 					<div class="form-actions">
-						<g:link class="btn" action="edit" id="\${${propertyName}?.id}">
-							<i class="icon-pencil"></i>
+						<g:link class="btn btn-default" action="edit" id="\${${propertyName}?.id}">
+							<i class="glyphicon glyphicon-pencil"></i>
 							<g:message code="default.button.edit.label" default="Edit" />
 						</g:link>
 						<button class="btn btn-danger" type="submit" name="_action_delete">
-							<i class="icon-trash icon-white"></i>
+							<i class="glyphicon glyphicon-trash"></i>
 							<g:message code="default.button.delete.label" default="Delete" />
 						</button>
 					</div>

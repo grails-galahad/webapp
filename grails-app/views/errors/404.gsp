@@ -10,8 +10,8 @@
 		<p>Sorry, the page you're looking for doesn't seem to exist.</p>
 		
 		<div class="actions">
-			<a href="./" class="btn btn-large btn-primary">
-				<i class="icon-chevron-left icon-white"></i>
+			<a href="./" class="btn btn-lg btn-primary">
+				<i class="glyphicon glyphicon-chevron-left"></i>
 				Back to Home
 			</a>
 		</div>

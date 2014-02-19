@@ -13,8 +13,6 @@ modules = {
     }
     
     images {
-        resource url: 'bootstrap/img/glyphicons-halflings-white.png'
-        resource url: 'bootstrap/img/glyphicons-halflings.png'
         resource url: 'images/apple-touch-icon-retina.png'
         resource url: 'images/apple-touch-icon.png'
         resource url: 'images/billboard.jpg'

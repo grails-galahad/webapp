@@ -6,8 +6,8 @@
 	</head>
 
 	<body>
-	    <div class="row-fluid">
-	        <div class="login span6 offset3">
+	    <div class="row">
+	        <div class="login col-md-6 col-md-offset-3">
         	    <g:if test='${flash.message}'>
         			<bootstrap:alert class="alert-error">${flash.message}</bootstrap:alert>
         		</g:if>
@@ -21,7 +21,7 @@
                             <input type="checkbox" name="${rememberMeParameter}" ${hasCookie ? 'checked="checked"' : ''}> Remember me
                         </label>
                     </fieldset>
-                    <button class="btn btn-large btn-primary" type="submit">Sign in</button>
+                    <button class="btn btn-lg btn-primary" type="submit">Sign in</button>
                 </form>
             </div>
         </div>
