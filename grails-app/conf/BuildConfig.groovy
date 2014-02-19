@@ -33,6 +33,7 @@ grails.project.dependency.resolution = {
     }
 
     dependencies {
+		build "com.asual.lesscss:lesscss-engine:1.4.2"
         runtime "postgresql:postgresql:9.1-901.jdbc4"
         test("org.seleniumhq.selenium:selenium-htmlunit-driver:$seleniumVersion") {
 			exclude "xml-apis"
@@ -49,7 +50,6 @@ grails.project.dependency.resolution = {
 		
         compile ":scaffolding:2.0.1"
         compile ':cache:1.1.1'
-		compile ":lesscss-resources:1.3.3"
         compile ":fields:1.3"
         compile ":spring-security-core:2.0-RC2"
         compile(":heroku:1.0.1") {

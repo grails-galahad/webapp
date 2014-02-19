@@ -53,14 +53,14 @@ footer {
 }
 
 .nav-separator {
-    color: @grayLight;
+    color: @gray-light;
     padding: 0 5px;
 }
 
 .linkbar {
     a {
         padding: 0 12px;
-        border-left: 1px dotted @grayLight;
+        border-left: 1px dotted @gray-light;
         &:first-child {
             border: none;
         }
@@ -94,7 +94,7 @@ tr {
     &.clickable {
         cursor: pointer;
         a {
-            color: @textColor;
+            color: @text-color;
             &:hover {
                 text-decoration: none;
             }
@@ -113,7 +113,7 @@ dl {
         margin: 0 0 20px 0;
     }
     dt, dd {
-        line-height: @baseLineHeight + 5px;
+        line-height: @line-height-computed + 5px;
     }
 }
 
@@ -192,9 +192,9 @@ label {
     max-width: 300px;
     padding: 19px 29px 29px;
     margin: 40px auto 80px;
-    background-color: @tableBackgroundAccent;
-    border: 1px solid darken(@tableBackgroundAccent, 7%);
-    .border-radius(8px);
+    background-color: @table-bg-accent;
+    border: 1px solid darken(@table-bg-accent, 7%);
+    border-radius: 8px;
     .box-shadow(0 1px 2px rgba(0,0,0,.1));
     text-align: center;
     h2 {
