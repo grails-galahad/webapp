@@ -16,5 +16,15 @@ $('.datetime-picker').datetimepicker({
     pickSeconds: false
 });
 
+resizeMainContainer();
 
 });
+
+function resizeMainContainer() {
+	var mainContainer = $('.container.main');
+	var footer = $('footer');
+	var newHeight = mainContainer.height() + ($(window).height() - (footer.offset().top + footer.outerHeight()));
+	if (newHeight > parseInt(mainContainer.css('min-height'))) {
+		mainContainer.css('min-height', newHeight);
+	}
+}

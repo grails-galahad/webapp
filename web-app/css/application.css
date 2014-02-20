@@ -5774,6 +5774,9 @@ button.close {
   }
 }
 /* Bootstrap overrides */
+.form-control-feedback {
+  z-index: 99;
+}
 /* Main Layout */
 body {
   padding-top: 60px;

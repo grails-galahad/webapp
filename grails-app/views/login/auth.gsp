@@ -9,7 +9,7 @@
 	    <div class="row">
 	        <div class="login col-md-6 col-md-offset-3">
         	    <g:if test='${flash.message}'>
-        			<bootstrap:alert class="alert-error">${flash.message}</bootstrap:alert>
+        			<bootstrap:alert class="alert-danger">${flash.message}</bootstrap:alert>
         		</g:if>
 		
                 <form class="form-signin" action="${postUrl}" method="POST" autocomplete="off">
