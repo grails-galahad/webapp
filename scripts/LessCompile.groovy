@@ -1,9 +1,12 @@
-#!/usr/bin/env groovy
-
-@Grab(group='com.asual.lesscss', module='lesscss-engine', version='1.4.2')
 import com.asual.lesscss.LessEngine
 
-def compiler = new LessEngine()
-File input = new File("../web-app/less/application.less")
-File target = new File("../web-app/css/application.css")
-compiler.compile input, target
+includeTargets << grailsScript("_GrailsInit")
+
+target(main: "Recompiles application.less into application.css.") {
+	def compiler = new LessEngine()
+	File input = new File("${basedir}/web-app/less/application.less")
+	File target = new File("${basedir}/web-app/css/application.css")
+	compiler.compile input, target
+}
+
+setDefaultTarget(main)

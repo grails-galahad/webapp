@@ -3,6 +3,10 @@ import com.asual.lesscss.LessEngine
 
 def origResourcesFile
 
+/*
+ * Less pre-compilation is required because the lesscss-resources plugin hasn't upgraded past Less 1.3.3
+ * and can't compile Bootstrap 3. This step uses Less Engine, which supports Less 1.4.2.
+*/
 eventCompileStart = {
     event("LessPrecompileStart", [])
     event("StatusUpdate", ["Compiling application.less into application.css"])
