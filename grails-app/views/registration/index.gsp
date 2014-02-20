@@ -36,7 +36,7 @@
                             </f:with>
                             
 							<div class="form-group">
-	                            <div class="checkbox col-md-offset-3">
+	                            <div class="checkbox col-md-offset-4">
 	                            	<label id="terms-check">
 	                            	    I accept the <a href="javascript:void(0)">terms of use</a>
 	                            	</label>
@@ -46,7 +46,7 @@
 	                            </div>
 							</div>
                             
-							<div class="col-md-offset-2">
+							<div class="col-md-offset-3">
 								<button type="submit" class="btn btn-primary">Sign Up</button>
 							</div>
 						</fieldset>

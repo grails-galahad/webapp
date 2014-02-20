@@ -44,7 +44,7 @@ modules = {
 
     'bootstrap-popover' {
         defaultBundle 'monolith'
-        dependsOn 'jquery'
+        dependsOn 'jquery', 'bootstrap-tooltip'
         resource url:[dir: 'bootstrap/js', file: 'popover.js']
     }
 
@@ -75,6 +75,6 @@ modules = {
     'bootstrap-js' {
         defaultBundle 'monolith'
         dependsOn 'jquery'
-        dependsOn 'bootstrap-affix', 'bootstrap-alert', 'bootstrap-button', 'bootstrap-carousel', 'bootstrap-collapse', 'bootstrap-dropdown', 'bootstrap-modal', 'bootstrap-popover', 'bootstrap-scrollspy', 'bootstrap-tab', 'bootstrap-tooltip', 'bootstrap-transition'
+        dependsOn 'bootstrap-affix', 'bootstrap-alert', 'bootstrap-button', 'bootstrap-carousel', 'bootstrap-collapse', 'bootstrap-dropdown', 'bootstrap-modal', 'bootstrap-popover', 'bootstrap-scrollspy', 'bootstrap-tab', 'bootstrap-transition'
     }
 }

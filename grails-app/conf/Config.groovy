@@ -18,16 +18,31 @@ grails.mime.types = [
     hal:           ['application/hal+json','application/hal+xml'],
     xml:           ['text/xml', 'application/xml']
 ]
-
-grails.resources.adhoc.patterns = []
-grails.resources.adhoc.includes = [] 
-grails.resources.adhoc.excludes = ["*"]
-grails.resources.mappers.lesscss.compress = true
-grails.views.default.codec = "html"
 grails.controllers.defaultScope = 'singleton'
 grails.databinding.dateFormats = ['MM/dd/yyyy hh:mm a', 'MM/dd/yyyy']
+grails.converters.encoding = "UTF-8"
+grails.scaffolding.templates.domainSuffix = 'Instance'
+grails.json.legacy.builder = false
+grails.enable.native2ascii = true
+grails.spring.bean.packages = []
+grails.web.disable.multipart=false
+grails.exceptionresolver.params.exclude = ['password']
+grails.hibernate.cache.queries = false
+grails.views.default.codec = "html"
 
 grails {
+	resources {
+		adhoc {
+			patterns = []
+			includes = [] 
+			excludes = ["*"]
+		}
+		mappers {
+			lesscss.compress = true
+			cssrewriter.excludes = ['**/boostrap/fonts/**']
+			csspreprocessor.excludes = ['**/bootstrap/fonts/**']
+		}
+	}
     views {
         gsp {
             encoding = 'UTF-8'
@@ -40,18 +55,6 @@ grails {
             }
         }
     }
-}
-
-grails.converters.encoding = "UTF-8"
-grails.scaffolding.templates.domainSuffix = 'Instance'
-grails.json.legacy.builder = false
-grails.enable.native2ascii = true
-grails.spring.bean.packages = []
-grails.web.disable.multipart=false
-grails.exceptionresolver.params.exclude = ['password']
-grails.hibernate.cache.queries = false
-
-grails {
     plugin {
         springsecurity {
             userLookup {
@@ -95,16 +98,13 @@ grails {
             cookiecount = 5
         }
     }
-}
-
-grails {
-   mail {
-     host = "smtp.mandrillapp.com"
-     port = 587
-     username = "paulcitarella"
-     password = "JEg-I9BapHcYLT8gKesUiw"
-   }
-   mail.default.from = "info@enterprise-grails.com"
+	mail {
+		host = "smtp.mandrillapp.com"
+		port = 587
+		username = "paulcitarella"
+		password = "JEg-I9BapHcYLT8gKesUiw"
+	}
+	mail.default.from = "info@enterprise-grails.com"
 }
 
 if (!(Environment.current in [Environment.DEVELOPMENT, Environment.TEST])) {
