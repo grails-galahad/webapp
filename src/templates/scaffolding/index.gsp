@@ -13,8 +13,7 @@
 			
 			<div class="col-md-3">
 				<div class="well">
-					<ul class="nav nav-list">
-						<li class="nav-header">\${entityName}</li>
+					<ul class="nav nav-pills nav-stacked">
 						<li class="active">
 							<g:link class="list" action="index">
 								<i class="glyphicon glyphicon-list"></i>
