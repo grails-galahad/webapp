@@ -30,24 +30,24 @@
 					<g:form class="form-horizontal" action="save">
 						<fieldset>
 					        <f:with bean="${userInstance}">
-                                <f:field property="fullName" input-class="form-control"/>
-                                <f:field property="email" input-class="form-control"/>
-                                <f:field property="password" input-class="form-control"/>
+                                <f:field property="fullName" />
+                                <f:field property="email" />
+                                <f:field property="password" />
                             </f:with>
                             
-                            <div class="form-group">
-                                <div class="controls">
-                                	<label id="terms-check" class="checkbox">
-                                	    I accept the <a href="javascript:void(0)">terms of use</a>
-                                	</label>
-                                	<r:script>
-                                	    $('#terms-check').prepend('<input type="checkbox" name="terms" ${params.terms == 'on' ? 'checked="true"' : ''}>');
-                                	</r:script>
-                            	</div>
-                            </div>
+							<div class="form-group">
+	                            <div class="checkbox col-md-offset-3">
+	                            	<label id="terms-check">
+	                            	    I accept the <a href="javascript:void(0)">terms of use</a>
+	                            	</label>
+	                            	<r:script>
+	                            	    $('#terms-check').prepend('<input type="checkbox" name="terms" ${params.terms == 'on' ? 'checked="true"' : ''}>');
+	                            	</r:script>
+	                            </div>
+							</div>
                             
-                            <div class="form-actions">
-    							<button type="submit" class="btn btn-primary">Sign Up</button>
+							<div class="col-md-offset-2">
+								<button type="submit" class="btn btn-primary">Sign Up</button>
 							</div>
 						</fieldset>
 					</g:form>
