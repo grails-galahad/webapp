@@ -66,22 +66,9 @@ footer {
 
 /* Scaffolding */
 th.asc, th.desc {
-    a:after {
-    	content: '';
-    	display: inline-block;
-    	width: 14px;
-    	height: 14px;
-    	margin-left: 0.3em;
-    	vertical-align: text-top;
-    }
-}
-
-th.asc a:after {
-	background-position: -289px -96px;
-}
-
-th.desc a:after {
-	background-position: -312px -96px;
+	.glyphicon {
+		margin-left: 10px;
+	}
 }
 
 tr {
@@ -103,46 +90,42 @@ thead {
 }
 
 dl {
-    p {
-        margin: 0 0 20px 0;
-    }
     dt, dd {
-        line-height: @line-height-computed + 5px;
+		padding-top: 7px;
+		padding-bottom: 7px;
     }
 }
 
-div.field {
-    margin-top: 10px;
-    dt {
-        float: left;
-        text-align: right;
-        width: 120px;
-    }
-    dd {
-        margin-left: 150px;
-    }
+.form-group {
+	ul {
+		margin-top: 0;
+		margin-bottom: 7px;
+		li {
+			margin-top: 3px;
+			margin-bottom: 3px;
+			&:first-child {
+				margin-top: 7px;
+			}
+		}
+	}
 }
 
-.controls {
-    ul {
-        margin: 5px 0 5px 25px;
-    }
+dd {
+	ul {
+		margin-bottom: 0;
+		li {
+			margin-top: 3px;
+			margin-bottom: 3px;
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
 }
 
-input[type="checkbox"], input[type="radio"] {
-    margin-top: 7px;
-}
-
-label {
-    input[type="checkbox"], input[type="radio"] {
-        margin-top: 4px;
-    }
-}
-
-.input-append, .input-prepend {
-    input {
-        width: 178px;
-    }
+input[type="checkbox"].checkbox-control {
+	margin: 0;
+	height: 34px;
 }
 
 /* Home */
@@ -244,11 +227,11 @@ pre.snippet {
 /* Projects */
 textarea#name {
     width: 450px;
-    height: 40px;
+    height: 50px;
 }
 
 /* Tasks */
 textarea#descr {
     width: 450px;
-    height: 60px;
+    height: 50px;
 }

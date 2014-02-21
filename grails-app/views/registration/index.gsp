@@ -7,7 +7,7 @@
 
 	<body>
 	    <div class="row">
-	        <div class="col-md-8 col-md-offset-2">
+	        <div class="col-md-6 col-md-offset-3">
         	    <div class="page-header">
             	    <h1>Sign Up</h1>
         	    </div>
@@ -36,18 +36,22 @@
                             </f:with>
                             
 							<div class="form-group">
-	                            <div class="checkbox col-md-offset-4">
-	                            	<label id="terms-check">
-	                            	    I accept the <a href="javascript:void(0)">terms of use</a>
-	                            	</label>
-	                            	<r:script>
-	                            	    $('#terms-check').prepend('<input type="checkbox" name="terms" ${params.terms == 'on' ? 'checked="true"' : ''}>');
-	                            	</r:script>
-	                            </div>
+								<div class="col-sm-5 col-sm-offset-4">
+		                            <div class="checkbox">
+		                            	<label id="terms-check">
+		                            	    I accept the <a href="javascript:void(0)">terms of use</a>
+		                            	</label>
+		                            	<r:script>
+		                            	    $('#terms-check').prepend('<input type="checkbox" name="terms" ${params.terms == 'on' ? 'checked="true"' : ''}>');
+		                            	</r:script>
+		                            </div>
+								</div>
 							</div>
                             
-							<div class="col-md-offset-3">
-								<button type="submit" class="btn btn-primary">Sign Up</button>
+							<div class="form-group">
+								<div class="col-sm-5 col-sm-offset-4">
+									<button type="submit" class="btn btn-primary">Sign Up</button>
+								</div>
 							</div>
 						</fieldset>
 					</g:form>

@@ -18,6 +18,9 @@ $('.datetime-picker').datetimepicker({
 
 resizeMainContainer();
 
+$('th.asc').append('<span class="glyphicon glyphicon-arrow-down"></span>');
+$('th.desc').append('<span class="glyphicon glyphicon-arrow-up"></span>');
+
 });
 
 function resizeMainContainer() {

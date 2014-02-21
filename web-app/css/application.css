@@ -5836,20 +5836,9 @@ footer .copy {
   border: none;
 }
 /* Scaffolding */
-th.asc a:after,
-th.desc a:after {
-  content: '';
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  margin-left: 0.3em;
-  vertical-align: text-top;
-}
-th.asc a:after {
-  background-position: -289px -96px;
-}
-th.desc a:after {
-  background-position: -312px -96px;
+th.asc .glyphicon,
+th.desc .glyphicon {
+  margin-left: 10px;
 }
 tr.clickable {
   cursor: pointer;
@@ -5863,38 +5852,35 @@ tr.clickable a:hover {
 thead th {
   white-space: nowrap;
 }
-dl p {
-  margin: 0 0 20px 0;
-}
 dl dt,
 dl dd {
-  line-height: 25px;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
-div.field {
-  margin-top: 10px;
+.form-group ul {
+  margin-top: 0;
+  margin-bottom: 7px;
 }
-div.field dt {
-  float: left;
-  text-align: right;
-  width: 120px;
+.form-group ul li {
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
-div.field dd {
-  margin-left: 150px;
-}
-.controls ul {
-  margin: 5px 0 5px 25px;
-}
-input[type="checkbox"],
-input[type="radio"] {
+.form-group ul li:first-child {
   margin-top: 7px;
 }
-label input[type="checkbox"],
-label input[type="radio"] {
-  margin-top: 4px;
+dd ul {
+  margin-bottom: 0;
 }
-.input-append input,
-.input-prepend input {
-  width: 178px;
+dd ul li {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+dd ul li:first-child {
+  margin-top: 0;
+}
+input[type="checkbox"].checkbox-control {
+  margin: 0;
+  height: 34px;
 }
 /* Home */
 .billboard {
@@ -5986,10 +5972,10 @@ pre.snippet .error {
 /* Projects */
 textarea#name {
   width: 450px;
-  height: 40px;
+  height: 50px;
 }
 /* Tasks */
 textarea#descr {
   width: 450px;
-  height: 60px;
+  height: 50px;
 }

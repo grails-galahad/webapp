@@ -40,7 +40,7 @@
 				<bootstrap:alert class="alert-info">\${flash.message}</bootstrap:alert>
 				</g:if>
                 
-				<dl>
+				<dl class="dl-horizontal">
 				<%  excludedProps = Event.allEvents.toList() << 'id' << 'version'
 				    if (GCU.isStaticProperty(domainClass.clazz, 'views')) excludedProps += domainClass.clazz.views?.show?.excludes ?: []
 					allowedNames = domainClass.persistentProperties*.name << 'dateCreated' << 'lastUpdated'
@@ -58,7 +58,7 @@
 				</dl>
 
 				<g:form url="[resource:${propertyName}, action:'delete']" method="DELETE">
-					<div class="form-actions">
+					<div class="form-group">
 						<g:link class="btn btn-default" action="edit" id="\${${propertyName}?.id}">
 							<i class="glyphicon glyphicon-pencil"></i>
 							<g:message code="default.button.edit.label" default="Edit" />

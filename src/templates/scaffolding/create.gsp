@@ -74,11 +74,13 @@
                                     <f:field property="${p.name}" input-class="form-control"/>
             				<%  } %>
                             </f:with>
-							<div class="form-actions">
-								<button type="submit" class="btn btn-primary">
-									<i class="glyphicon glyphicon-ok"></i>
-									<g:message code="default.button.create.label" default="Create" />
-								</button>
+							<div class="form-group">
+								<div class="col-sm-5 col-sm-offset-2">
+									<button type="submit" class="btn btn-primary">
+										<i class="glyphicon glyphicon-ok"></i>
+										<g:message code="default.button.create.label" default="Create" />
+									</button>
+								</div>
 							</div>
 						</fieldset>
 					</g:form>
