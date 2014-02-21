@@ -16,13 +16,13 @@
 					<ul class="nav nav-pills nav-stacked">
 						<li>
 							<g:link class="list" action="index">
-								<i class="glyphicon glyphicon-list"></i>
+								<span class="glyphicon glyphicon-list"></span>
 								<g:message code="default.list.label" args="[entityName]" />
 							</g:link>
 						</li>
 						<li>
 							<g:link class="create" action="create">
-								<i class="glyphicon glyphicon-plus"></i>
+								<span class="glyphicon glyphicon-plus"></span>
 								<g:message code="default.create.label" args="[entityName]" />
 							</g:link>
 						</li>
@@ -60,11 +60,11 @@
 				<g:form url="[resource:${propertyName}, action:'delete']" method="DELETE">
 					<div class="form-group">
 						<g:link class="btn btn-default" action="edit" id="\${${propertyName}?.id}">
-							<i class="glyphicon glyphicon-pencil"></i>
+							<span class="glyphicon glyphicon-pencil"></span>
 							<g:message code="default.button.edit.label" default="Edit" />
 						</g:link>
 						<button class="btn btn-danger" type="submit" name="_action_delete">
-							<i class="glyphicon glyphicon-trash"></i>
+							<span class="glyphicon glyphicon-trash"></span>
 							<g:message code="default.button.delete.label" default="Delete" />
 						</button>
 					</div>

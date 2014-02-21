@@ -10,11 +10,7 @@ $('tr.clickable').click(function() {
     if (href) window.location = href;
 });
 
-$('.datetime-picker').datetimepicker({
-    language: 'en',
-    pick12HourFormat: true,
-    pickSeconds: false
-});
+$('.datetime-picker').datetimepicker();
 
 resizeMainContainer();
 

@@ -16,13 +16,13 @@
 					<ul class="nav nav-pills nav-stacked">
 						<li>
 							<g:link class="list" action="index">
-								<i class="glyphicon glyphicon-list"></i>
+								<span class="glyphicon glyphicon-list"></span>
 								<g:message code="default.list.label" args="[entityName]" />
 							</g:link>
 						</li>
 						<li class="active">
 							<g:link class="create" action="create">
-								<i class="glyphicon glyphicon-plus"></i>
+								<span class="glyphicon glyphicon-plus"></span>
 								<g:message code="default.create.label" args="[entityName]" />
 							</g:link>
 						</li>
@@ -77,7 +77,7 @@
 							<div class="form-group">
 								<div class="col-sm-5 col-sm-offset-2">
 									<button type="submit" class="btn btn-primary">
-										<i class="glyphicon glyphicon-ok"></i>
+										<span class="glyphicon glyphicon-ok"></span>
 										<g:message code="default.button.create.label" default="Create" />
 									</button>
 								</div>

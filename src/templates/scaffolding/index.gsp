@@ -16,13 +16,13 @@
 					<ul class="nav nav-pills nav-stacked">
 						<li class="active">
 							<g:link class="list" action="index">
-								<i class="glyphicon glyphicon-list"></i>
+								<span class="glyphicon glyphicon-list"></span>
 								<g:message code="default.list.label" args="[entityName]" />
 							</g:link>
 						</li>
 						<li>
 							<g:link class="create" action="create">
-								<i class="glyphicon glyphicon-plus"></i>
+								<span class="glyphicon glyphicon-plus"></span>
 								<g:message code="default.create.label" args="[entityName]" />
 							</g:link>
 						</li>

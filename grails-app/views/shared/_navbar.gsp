@@ -32,14 +32,14 @@
 	        <ul class="nav navbar-nav navbar-right">
 				<sec:ifLoggedIn>
 	                <li class="dropdown">
-	                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> <sec:loggedInUserInfo field="fullName" /><b class="caret"></b></a>
+	                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> <sec:loggedInUserInfo field="fullName" /><b class="caret"></b></a>
 	                    <ul class="dropdown-menu">
 	                        <li><g:link controller="logout">Sign Out</g:link></li>
 	                    </ul>
 	                </li>
 	                <sec:ifAllGranted roles="ROLE_ADMIN">
 	                    <li class="dropdown">
-	                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-cog"></i><b class="caret"></b></a>
+	                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span><b class="caret"></b></a>
 	                        <ul class="dropdown-menu">
 	                            <li><g:link controller="console">Groovy Console</g:link></li>
 	                            <g:if test="${System.env['DATABASE_URL']}">

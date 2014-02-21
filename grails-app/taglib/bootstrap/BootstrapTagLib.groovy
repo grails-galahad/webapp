@@ -67,7 +67,7 @@ class BootstrapTagLib {
 			writer << '>'
 			def prevLinkAttrs = linkTagAttrs.clone()
 			prevLinkAttrs += [title: (attrs.prev ?: messageSource.getMessage('paginate.prev', null, messageSource.getMessage('default.paginate.prev', null, 'Previous', locale), locale))]
-			writer << link(prevLinkAttrs, '<i class="glyphicon glyphicon-chevron-left"></i>')
+			writer << link(prevLinkAttrs, '<span class="glyphicon glyphicon-chevron-left"></span>')
 			writer << '</li>'
 		}
 
@@ -107,7 +107,7 @@ class BootstrapTagLib {
 			writer << '>'
 			def nextLinkAttrs = linkTagAttrs.clone()
 			nextLinkAttrs += [title: (attrs.next ? attrs.next : messageSource.getMessage('paginate.next', null, messageSource.getMessage('default.paginate.next', null, 'Next', locale), locale))]
-			writer << link(nextLinkAttrs, '<i class="glyphicon glyphicon-chevron-right"></i>')
+			writer << link(nextLinkAttrs, '<span class="glyphicon glyphicon-chevron-right"></span>')
 			writer << '</li>'
 		}
 		

@@ -11,7 +11,7 @@
 		
 		<div class="actions">
 			<a href="./" class="btn btn-lg btn-primary">
-				<i class="glyphicon glyphicon-chevron-left"></i>
+				<span class="glyphicon glyphicon-chevron-left"></span>
 				Back to Home
 			</a>
 		</div>
