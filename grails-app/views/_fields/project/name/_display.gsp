@@ -1,1 +1,1 @@
-<p class="text-xlarge">${value}</p>
+<h3>${value}</h3>

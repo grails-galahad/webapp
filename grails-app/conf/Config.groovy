@@ -29,6 +29,7 @@ grails.web.disable.multipart=false
 grails.exceptionresolver.params.exclude = ['password']
 grails.hibernate.cache.queries = false
 grails.views.default.codec = "html"
+grails.gorm.default.mapping = { sort 'id' }
 
 grails {
 	resources {
