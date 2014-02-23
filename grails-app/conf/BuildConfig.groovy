@@ -33,7 +33,7 @@ grails.project.dependency.resolution = {
     }
 
     dependencies {
-		build "com.asual.lesscss:lesscss-engine:1.4.2"
+		compile "com.asual.lesscss:lesscss-engine:1.4.2"
         runtime "postgresql:postgresql:9.1-901.jdbc4"
         test("org.seleniumhq.selenium:selenium-htmlunit-driver:$seleniumVersion") {
 			exclude "xml-apis"

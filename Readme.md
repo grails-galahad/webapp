@@ -54,3 +54,21 @@ Monitoring and log alerts
 About Galahad
 -------------
 Named after Sir Galahad the Pure, Galahad is a collection of pristine Grails starter projects for specific use cases. Each project reflects a set of opinionated decisions about design, plugins, testing methodologies and 3rd party service providers, and is intended to be a starting point for developing a production Grails app based on best practices.
+
+To Do
+-----
+* Job cluster sync util (?)
+* Implement fixtures
+* Security filter test (may require adding package to filter class)
+* Add NewRelic
+* Rich text field with tinyMCE (?)
+* Geb tests
+    * FunctionalSpecBase for resetting DB
+* Mailchimp integration
+* Braintree integration
+* Google analytics
+* Auto-generate ImageResources.groovy
+* Remove Project and Tasks (during init)
+* Dropdown login form
+* Test nav bar collapse
+* Password change

@@ -1,8 +1,5 @@
 package com.webapp
 
-import grails.validation.Validateable
-
-@Validateable
 class Address {
 
 	String address1
