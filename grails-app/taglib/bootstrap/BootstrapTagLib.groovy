@@ -25,6 +25,7 @@ class BootstrapTagLib {
         def locale = RCU.getLocale(request)
 
         def total = attrs.int('total') ?: 0
+		
         def action = (attrs.action ? attrs.action : (params.action ? params.action : "list"))
         def offset = params.int('offset') ?: 0
         def max = params.int('max')
@@ -57,7 +58,7 @@ class BootstrapTagLib {
         int firststep = 1
         int laststep = Math.round(Math.ceil(total / max))
 
-		writer << '<ul>'
+		writer << '<ul class="pagination">'
 
 		if (currentstep > firststep) {
 			linkTagAttrs.class = 'prevLink'

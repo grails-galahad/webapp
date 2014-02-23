@@ -77,8 +77,8 @@
 					</g:each>
 					</tbody>
 				</table>
-				<div class="pagination">
-					<bootstrap:paginate total="\${${propertyName}Count ?: 0}" />
+				<div>
+					<bootstrap:paginate total="\${${propertyName}Count ?: 0}" action="index" />
 				</div>
 			</div>
 
