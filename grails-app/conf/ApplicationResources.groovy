@@ -1,18 +1,15 @@
 modules = {
     application {
         defaultBundle 'monolith'
-        dependsOn 'jquery, jquery-ui, bootstrap-js'
-        resource url: 'js/spin.min.js'
-        resource url: 'js/jquery.spin.js'
-        resource url: 'js/modernizr.min.js'
+        dependsOn 'jquery, jquery-ui'
+        resource url: 'bootstrap/js/bootstrap.min.js'
         resource url: 'js/moment.min.js'
         resource url: 'js/bootstrap-datetimepicker.js'
         resource url: 'js/application.js'
         resource url: 'css/application.css'
-        resource url: 'css/bootstrap-datetimepicker.min.css'
         resource url: 'css/dummy.css'
     }
-    
+	
     images {
         resource url: 'images/apple-touch-icon-retina.png'
         resource url: 'images/apple-touch-icon.png'
@@ -22,6 +19,9 @@ modules = {
 
     overrides {
         jquery {
+            defaultBundle 'monolith'
+        }
+        'jquery-ui' {
             defaultBundle 'monolith'
         }
     }

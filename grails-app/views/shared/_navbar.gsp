@@ -1,6 +1,6 @@
 <%! import org.codehaus.groovy.grails.commons.GrailsClassUtils as GCU %>
 
-<nav class="navbar navbar-fixed-top navbar-inverse">
+<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
 	<div class="container">
 		
 		<div class="navbar-header">
@@ -32,14 +32,14 @@
 	        <ul class="nav navbar-nav navbar-right">
 				<sec:ifLoggedIn>
 	                <li class="dropdown">
-	                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> <sec:loggedInUserInfo field="fullName" /><b class="caret"></b></a>
+	                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>&nbsp;<sec:loggedInUserInfo field="fullName" />&nbsp;<span class="caret"></span></a>
 	                    <ul class="dropdown-menu">
 	                        <li><g:link controller="logout">Sign Out</g:link></li>
 	                    </ul>
 	                </li>
 	                <sec:ifAllGranted roles="ROLE_ADMIN">
 	                    <li class="dropdown">
-	                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span><b class="caret"></b></a>
+	                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span>&nbsp;<span class="caret"></span></a>
 	                        <ul class="dropdown-menu">
 	                            <li><g:link controller="console">Groovy Console</g:link></li>
 	                            <g:if test="${System.env['DATABASE_URL']}">
@@ -50,7 +50,7 @@
 	                            </g:else>
 	                        </ul>
 	                    </li>
-	                </sec:ifAllGranted>
+					</sec:ifAllGranted>
 	            </sec:ifLoggedIn>
 	            <sec:ifNotLoggedIn>
 	                <li><g:link controller="registration">Sign Up</g:link></li>
