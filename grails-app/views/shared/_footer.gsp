@@ -1,7 +1,7 @@
 <footer class="footer-inverse">
     <div class="container">
         <div class="row">
-            <div class="col-centered col-md-8 col-md-offset-2 linkbar">
+            <div class="col-md-8 col-md-offset-2 linkbar">
 	            <a href="${createLink(uri: '/')}">About</a>
 	            <a href="${createLink(uri: '/')}">Tour</a>
 	            <a href="${createLink(uri: '/')}">Pricing</a>
