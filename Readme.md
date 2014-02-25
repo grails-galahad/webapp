@@ -55,11 +55,14 @@ About Galahad
 -------------
 Named after Sir Galahad the Pure, Galahad is a collection of pristine Grails starter projects for specific use cases. Each project reflects a set of opinionated decisions about design, plugins, testing methodologies and 3rd party service providers, and is intended to be a starting point for developing a production Grails app based on best practices.
 
-Other Useful Libraries
-----------------------
-* Modernizr
-* Spin.js
-* qTip
+Known Issues
+------------
+###Login doesn't work after failed attempt
+* Problem with Cookie Session plugin and Spring Security v2
+* Logout or delting cookies resolves it
+
+###Validation errors on embedded fields not being enforced
+* When validation errors exist only for an embedded object, errors are not displayed and invalid state is saved
 
 To Do
 -----

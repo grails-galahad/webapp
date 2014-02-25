@@ -135,6 +135,6 @@ environments {
 
 log4j = {
     appenders {
-       // 'null' name:"stacktrace"
+       'null' name:"stacktrace"
     }
 }
