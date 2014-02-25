@@ -37,7 +37,7 @@
 	                        <li><g:link controller="logout">Sign Out</g:link></li>
 	                    </ul>
 	                </li>
-	                <sec:ifAllGranted roles="ROLE_ADMIN">
+	                <sec:ifAnyGranted roles="ROLE_ADMIN">
 	                    <li class="dropdown">
 	                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span>&nbsp;<span class="caret"></span></a>
 	                        <ul class="dropdown-menu">
@@ -50,7 +50,7 @@
 	                            </g:else>
 	                        </ul>
 	                    </li>
-					</sec:ifAllGranted>
+					</sec:ifAnyGranted>
 	            </sec:ifLoggedIn>
 	            <sec:ifNotLoggedIn>
 	                <li><g:link controller="registration">Sign Up</g:link></li>

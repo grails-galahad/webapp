@@ -3,8 +3,8 @@ grails.project.class.dir = "target/classes"
 grails.project.test.class.dir = "target/test-classes"
 grails.project.test.reports.dir = "target/test-reports"
 grails.project.work.dir = "target/work"
-grails.project.source.level = 1.6
-grails.project.target.level = 1.6
+grails.project.source.level = 1.7
+grails.project.target.level = 1.7
 
 grails.project.fork = [
     test: [maxMemory: 768, minMemory: 64, debug: false, maxPerm: 256, daemon:true],
@@ -45,10 +45,10 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
-		// build ":tomcat:7.0.50" // run-app blows up with -https
+		// build ":tomcat:7.0.50.1" // run-app blows up with -https
 		build ":tomcat:7.0.47"
 		
-        compile ":scaffolding:2.0.1"
+        compile ":scaffolding:2.0.2"
         compile ':cache:1.1.1'
         compile ":fields:1.3"
         compile ":spring-security-core:2.0-RC2"
@@ -62,7 +62,7 @@ grails.project.dependency.resolution = {
         compile ":mail:1.0.1"
         compile ":quartz:1.0.1"
 
-        runtime ":hibernate:3.6.10.7" // or ":hibernate4:4.1.11.6"
+        runtime ":hibernate:3.6.10.8"
         runtime ":database-migration:1.3.8"
         runtime ":jquery:1.11.0.1"
 		runtime ":jquery-ui:1.10.3"

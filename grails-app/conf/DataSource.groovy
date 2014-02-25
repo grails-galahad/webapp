@@ -1,19 +1,33 @@
 dataSource {
     pooled = true
+	jmxExport = true
     driverClassName = "org.postgresql.Driver"
     dialect = org.hibernate.dialect.PostgreSQLDialect
     username = "webapp"
     password = "webapp"
     properties {
-       maxActive = -1
-       minEvictableIdleTimeMillis=1800000
-       timeBetweenEvictionRunsMillis=1800000
-       numTestsPerEvictionRun=3
-       testOnBorrow=true
-       testWhileIdle=true
-       testOnReturn=false
-       validationQuery="SELECT 1"
-       jdbcInterceptors="ConnectionState"
+       jmxEnabled = true
+       initialSize = 5
+       maxActive = 50
+       minIdle = 5
+       maxIdle = 25
+       maxWait = 10000
+       maxAge = 10 * 60000
+       timeBetweenEvictionRunsMillis = 5000
+       minEvictableIdleTimeMillis = 60000
+       validationQuery = "SELECT 1"
+       validationQueryTimeout = 3
+       validationInterval = 15000
+       testOnBorrow = true
+       testWhileIdle = true
+       testOnReturn = false
+       ignoreExceptionOnPreLoad = true
+       jdbcInterceptors = "ConnectionState;StatementCache(max=200)"
+       defaultTransactionIsolation = java.sql.Connection.TRANSACTION_READ_COMMITTED
+       abandonWhenPercentageFull = 100
+       removeAbandonedTimeout = 120000
+       removeAbandoned = true
+       logAbandoned = false
     }
 }
 

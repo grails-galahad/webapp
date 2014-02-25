@@ -48,7 +48,7 @@
 					    allowedNames.retainAll(domainClass.clazz.views.show.includes)
 					    excludedProps.removeAll(domainClass.clazz.views.show.includes)
 				    }
-					props = domainClass.properties.findAll { allowedNames.contains(it.name) && !excludedProps.contains(it.name) }
+					props = domainClass.properties.findAll { allowedNames.contains(it.name) && !excludedProps.contains(it.name) && (domainClass.constrainedProperties[it.name] ? domainClass.constrainedProperties[it.name].display : true) }
 					Collections.sort(props, comparator.constructors[0].newInstance([domainClass] as Object[]))
 					props.each { p -> %>
 					
