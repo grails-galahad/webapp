@@ -66,18 +66,17 @@ Known Issues
 
 To Do
 -----
-* Job cluster sync util (?)
-* Implement fixtures
-* Security filter test (may require adding package to filter class)
-* Add NewRelic
-* Rich text field with tinyMCE (?)
 * Geb tests
     * FunctionalSpecBase for resetting DB
+* Remove Project and Tasks during init
+* Implement fixtures plugin
+* Security filter test (may require adding package to filter class)
+* Add NewRelic
 * Mailchimp integration
 * Braintree integration
 * Google analytics
 * Auto-generate ImageResources.groovy
-* Remove Project and Tasks (during init)
-* Dropdown login form
-* Test nav bar collapse
 * Password change
+* Dropdown login form
+* Job cluster sync util (?)
+* Rich text field with tinyMCE (?)
