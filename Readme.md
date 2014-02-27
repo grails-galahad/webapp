@@ -57,12 +57,9 @@ Named after Sir Galahad the Pure, Galahad is a collection of pristine Grails sta
 
 Known Issues
 ------------
-###Login doesn't work after failed attempt
-* Problem with Cookie Session plugin and Spring Security v2
-* Logout or delting cookies resolves it
-
 ###Validation errors on embedded fields not being enforced
 * When validation errors exist only for an embedded object, errors are not displayed and invalid state is saved
+* Workaround is to call discard() in controller
 
 To Do
 -----
