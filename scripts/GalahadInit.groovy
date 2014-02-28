@@ -8,7 +8,7 @@ target(main: "Renames a Galahad webapp application and refactors package structu
     
     def base = basedir
     def appName = args.split()[0]
-    def excludes = ['Readme.md', 'Rename.groovy']
+    def excludes = ['Readme.md', 'GalahadInit.groovy']
     
     ant.delete dir:"${base}/target"
     
