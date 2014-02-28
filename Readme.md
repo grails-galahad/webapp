@@ -1,9 +1,7 @@
-Galahad - webapp
-================
+# Galahad - webapp
 A starter project for a typical consumer web app based on Twitter Bootstrap, LESS, jQuery and a curated set of plugins, hosted on Heroku, and using MailChimp and Mandrill for email.
 
-Usage
------
+##Usage
 Simply clone the project, run galahad-init, and init your own git repo.
 
     git clone https://github.com/grails-galahad/webapp.git myapp
@@ -18,8 +16,7 @@ Simply clone the project, run galahad-init, and init your own git repo.
     heroku open
 
 
-Heroku Setup
-------------
+##Heroku Setup
 Basic setup
 
     heroku labs:enable -a myapp user-env-compile
@@ -51,23 +48,21 @@ Monitoring and log alerts
     heroku addons:add -a myapp papertrail:choklad
 
 
-About Galahad
--------------
+##About Galahad
 Named after Sir Galahad the Pure, Galahad is a collection of pristine Grails starter projects for specific use cases. Each project reflects a set of opinionated decisions about design, plugins, testing methodologies and 3rd party service providers, and is intended to be a starting point for developing a production Grails app based on best practices.
 
-Known Issues
-------------
+##Known Issues
+
 ###Validation errors on embedded fields not being enforced
 * When validation errors exist only for an embedded object, errors are not displayed and invalid state is saved
 * Workaround is to call discard() in controller
 
-To Do
------
+##To Do
+* Remove Project and Tasks during init
 * Geb tests
     * FunctionalSpecBase for resetting DB
-* Remove Project and Tasks during init
-* Implement fixtures plugin
 * Security filter test (may require adding package to filter class)
+* Implement fixtures plugin
 * Add NewRelic
 * Mailchimp integration
 * Braintree integration

@@ -11,11 +11,11 @@ $('tr.clickable').click(function() {
 });
 
 $('.datetime-picker').datetimepicker();
-
-resizeMainContainer();
-
 $('th.asc').append('<span class="glyphicon glyphicon-arrow-down"></span>');
 $('th.desc').append('<span class="glyphicon glyphicon-arrow-up"></span>');
+$('fieldset.embedded .form-group input').addClass('form-control');
+
+resizeMainContainer();
 
 });
 

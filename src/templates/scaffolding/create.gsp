@@ -71,7 +71,7 @@
             					props = domainClass.properties.findAll { allowedNames.contains(it.name) && !excludedProps.contains(it.name) }
             					Collections.sort(props, comparator.constructors[0].newInstance([domainClass] as Object[]))
             					props.each { p -> %>
-                                    <f:field property="${p.name}" input-class="form-control"/>
+                                    <f:field property="${p.name}" input-class="${p.type == Boolean ? 'checkbox-control' : 'form-control'}"/>
             				<%  } %>
                             </f:with>
 							<div class="form-group">
