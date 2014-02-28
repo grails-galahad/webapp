@@ -20,7 +20,7 @@
 						</Item>
 					</Array>
 				</Arg>
-				<Set name="port">8080</Set>
+				<Set name="port"><SystemProperty name="jetty.port" default="8080"/></Set>
 			</New>
 		</Arg>
 	</Call>
