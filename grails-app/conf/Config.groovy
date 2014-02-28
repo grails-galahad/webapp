@@ -115,7 +115,6 @@ if (!(Environment.current in [Environment.DEVELOPMENT, Environment.TEST])) {
     grails.plugin.springsecurity.secureChannel.useHeaderCheckChannelSecurity = true
     grails.logging.jul.usebridge = false
     grails.plugin.databasemigration.updateOnStart = true
-    grails.dbconsole.enabled = true
 }
 
 environments {

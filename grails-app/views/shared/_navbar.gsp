@@ -1,4 +1,5 @@
 <%! import org.codehaus.groovy.grails.commons.GrailsClassUtils as GCU %>
+<%! import grails.util.Environment %>
 
 <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
 	<div class="container">
@@ -42,12 +43,9 @@
 	                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span>&nbsp;<span class="caret"></span></a>
 	                        <ul class="dropdown-menu">
 	                            <li><g:link controller="console">Groovy Console</g:link></li>
-	                            <g:if test="${System.env['DATABASE_URL']}">
-	                                <li><h:dbconsoleLink>Database Console</h:dbconsoleLink></li>
-	                            </g:if>
-	                            <g:else>
+	                            <g:if test="${Environment.current == Environment.DEVELOPMENT}">
 	                                <li><g:link controller="dbconsole">Database Console</g:link></li>
-	                            </g:else>
+	                            </g:if>
 	                        </ul>
 	                    </li>
 					</sec:ifAnyGranted>
