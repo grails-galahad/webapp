@@ -1,6 +1,6 @@
 databaseChangeLog = {
 
-	changeSet(author: "paulcitarella (generated)", id: "1373334023838-1") {
+	changeSet(author: "paulcitarella (generated)", id: "1393596880665-1") {
 		createTable(tableName: "person") {
 			column(name: "id", type: "int8") {
 				constraints(nullable: "false", primaryKey: "true", primaryKeyName: "personPK")
@@ -52,7 +52,7 @@ databaseChangeLog = {
 		}
 	}
 
-	changeSet(author: "paulcitarella (generated)", id: "1373334023838-2") {
+	changeSet(author: "paulcitarella (generated)", id: "1393596880665-2") {
 		createTable(tableName: "project") {
 			column(name: "id", type: "int8") {
 				constraints(nullable: "false", primaryKey: "true", primaryKeyName: "projectPK")
@@ -80,7 +80,7 @@ databaseChangeLog = {
 		}
 	}
 
-	changeSet(author: "paulcitarella (generated)", id: "1373334023838-3") {
+	changeSet(author: "paulcitarella (generated)", id: "1393596880665-3") {
 		createTable(tableName: "role") {
 			column(name: "id", type: "int8") {
 				constraints(nullable: "false", primaryKey: "true", primaryKeyName: "rolePK")
@@ -96,7 +96,7 @@ databaseChangeLog = {
 		}
 	}
 
-	changeSet(author: "paulcitarella (generated)", id: "1373334023838-4") {
+	changeSet(author: "paulcitarella (generated)", id: "1393596880665-4") {
 		createTable(tableName: "task") {
 			column(name: "id", type: "int8") {
 				constraints(nullable: "false", primaryKey: "true", primaryKeyName: "taskPK")
@@ -130,7 +130,7 @@ databaseChangeLog = {
 		}
 	}
 
-	changeSet(author: "paulcitarella (generated)", id: "1373334023838-5") {
+	changeSet(author: "paulcitarella (generated)", id: "1393596880665-5") {
 		createTable(tableName: "user_role") {
 			column(name: "role_id", type: "int8") {
 				constraints(nullable: "false")
@@ -142,33 +142,39 @@ databaseChangeLog = {
 		}
 	}
 
-	changeSet(author: "paulcitarella (generated)", id: "1373334023838-6") {
+	changeSet(author: "paulcitarella (generated)", id: "1393596880665-6") {
 		addPrimaryKey(columnNames: "role_id, user_id", constraintName: "user_rolePK", tableName: "user_role")
 	}
 
-	changeSet(author: "paulcitarella (generated)", id: "1373334023838-11") {
-		createIndex(indexName: "authority_uniq_1373334023530", tableName: "role", unique: "true") {
+	changeSet(author: "paulcitarella (generated)", id: "1393596880665-11") {
+		createIndex(indexName: "email_uniq_1393596880593", tableName: "person", unique: "true") {
+			column(name: "email")
+		}
+	}
+
+	changeSet(author: "paulcitarella (generated)", id: "1393596880665-12") {
+		createIndex(indexName: "authority_uniq_1393596880604", tableName: "role", unique: "true") {
 			column(name: "authority")
 		}
 	}
 
-	changeSet(author: "paulcitarella (generated)", id: "1373334023838-12") {
+	changeSet(author: "paulcitarella (generated)", id: "1393596880665-13") {
 		createSequence(sequenceName: "hibernate_sequence")
 	}
 
-	changeSet(author: "paulcitarella (generated)", id: "1373334023838-7") {
+	changeSet(author: "paulcitarella (generated)", id: "1393596880665-7") {
 		addForeignKeyConstraint(baseColumnNames: "owner_id", baseTableName: "project", constraintName: "FKED904B199E322026", deferrable: "false", initiallyDeferred: "false", referencedColumnNames: "id", referencedTableName: "person", referencesUniqueColumn: "false")
 	}
 
-	changeSet(author: "paulcitarella (generated)", id: "1373334023838-8") {
+	changeSet(author: "paulcitarella (generated)", id: "1393596880665-8") {
 		addForeignKeyConstraint(baseColumnNames: "project_id", baseTableName: "task", constraintName: "FK363585E6F33C66", deferrable: "false", initiallyDeferred: "false", referencedColumnNames: "id", referencedTableName: "project", referencesUniqueColumn: "false")
 	}
 
-	changeSet(author: "paulcitarella (generated)", id: "1373334023838-9") {
+	changeSet(author: "paulcitarella (generated)", id: "1393596880665-9") {
 		addForeignKeyConstraint(baseColumnNames: "role_id", baseTableName: "user_role", constraintName: "FK143BF46A8D20AC2E", deferrable: "false", initiallyDeferred: "false", referencedColumnNames: "id", referencedTableName: "role", referencesUniqueColumn: "false")
 	}
 
-	changeSet(author: "paulcitarella (generated)", id: "1373334023838-10") {
+	changeSet(author: "paulcitarella (generated)", id: "1393596880665-10") {
 		addForeignKeyConstraint(baseColumnNames: "user_id", baseTableName: "user_role", constraintName: "FK143BF46A324B700E", deferrable: "false", initiallyDeferred: "false", referencedColumnNames: "id", referencedTableName: "person", referencesUniqueColumn: "false")
 	}
 }
