@@ -45,8 +45,7 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
-		// build ":tomcat:7.0.50.1" // run-app blows up with -https
-		build ":tomcat:7.0.47"
+		build ":tomcat:7.0.52"
 		
         compile ":scaffolding:2.0.2"
         compile ':cache:1.1.1'
@@ -64,9 +63,9 @@ grails.project.dependency.resolution = {
 
         runtime ":hibernate:3.6.10.8"
         runtime ":database-migration:1.3.8"
-        runtime ":jquery:1.11.0.1"
+        runtime ":jquery:1.11.0.2"
 		runtime ":jquery-ui:1.10.3"
-        runtime ":resources:1.2.1"
+        runtime ":resources:1.2.7"
         runtime ":cache-headers:1.1.5"
         runtime ":cached-resources:1.1"
         runtime ":zipped-resources:1.0.1"
