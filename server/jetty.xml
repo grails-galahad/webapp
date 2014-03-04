@@ -3,8 +3,8 @@
 
 <Configure id="Server" class="org.eclipse.jetty.server.Server">
 	<New id="httpConfig" class="org.eclipse.jetty.server.HttpConfiguration">
-	    <Set name="requestHeaderSize">10240</Set>
-	    <Set name="responseHeaderSize">10240</Set>
+	    <Set name="requestHeaderSize">262144</Set>
+	    <Set name="responseHeaderSize">262144</Set>
 	</New> 
 
 	<Call name="addConnector">
