@@ -5,6 +5,7 @@ modules = {
         resource url: 'bootstrap/js/bootstrap.min.js'
         resource url: 'js/moment.min.js'
         resource url: 'js/bootstrap-datetimepicker.js'
+        resource url: 'js/holder.js'
         resource url: 'js/application.js'
         resource url: 'css/application.css'
     }

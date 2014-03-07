@@ -6056,7 +6056,7 @@ input[type="checkbox"].checkbox-control {
 }
 /* Home */
 .billboard {
-  height: 360px;
+  height: 340px;
 }
 .billboard img {
   position: absolute;
@@ -6068,9 +6068,8 @@ input[type="checkbox"].checkbox-control {
 }
 .billboard .billboard-caption {
   background-color: transparent;
-  max-width: 550px;
   padding: 0 20px;
-  margin-top: 100px;
+  margin-top: 130px;
 }
 .billboard .billboard-caption h1,
 .billboard .billboard-caption .lead {
@@ -6080,9 +6079,20 @@ input[type="checkbox"].checkbox-control {
 }
 .billboard .billboard-caption h1 {
   font-size: 5em;
+  text-shadow: 1px 1px 3px #999;
 }
 .billboard .btn {
   margin-top: 10px;
+}
+.marketing > div {
+  text-align: center;
+}
+.featurette-divider {
+  margin: 80px 0;
+}
+.featurette h2 {
+  margin-top: 120px;
+  font-size: 3.5em;
 }
 /* Signin */
 .login {
