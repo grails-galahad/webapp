@@ -6,7 +6,7 @@
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="\${message(code: '${domainClass.propertyName}.label', default: '${className}')}" />
-		<title><g:message code="default.show.label" args="[entityName]" /></title>
+		<title>\${message(code:"${domainClass.propertyName}.show.label", default:'') ?: message(code:'default.show.label', args:[entityName])}</title>
 	</head>
 	<body>
 		<div class="row">
@@ -17,13 +17,13 @@
 						<li>
 							<g:link class="list" action="index">
 								<span class="glyphicon glyphicon-list"></span>
-								<g:message code="default.list.label" args="[entityName]" />
+								\${message(code:"${domainClass.propertyName}.list.label", default:'') ?: message(code:'default.list.label', args:[entityName])}
 							</g:link>
 						</li>
 						<li>
 							<g:link class="create" action="create">
 								<span class="glyphicon glyphicon-plus"></span>
-								<g:message code="default.create.label" args="[entityName]" />
+								\${message(code:"${domainClass.propertyName}.create.label", default:'') ?: message(code:'default.create.label', args:[entityName])}
 							</g:link>
 						</li>
 					</ul>

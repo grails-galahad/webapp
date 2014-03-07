@@ -6,7 +6,7 @@
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="\${message(code: '${domainClass.propertyName}.label', default: '${className}')}" />
-		<title><g:message code="default.create.label" args="[entityName]" /></title>
+		<title>\${message(code:"${domainClass.propertyName}.create.label", default:'') ?: message(code:'default.create.label', args:[entityName])}</title>
 	</head>
 	<body>
 		<div class="row">
@@ -17,13 +17,13 @@
 						<li>
 							<g:link class="list" action="index">
 								<span class="glyphicon glyphicon-list"></span>
-								<g:message code="default.list.label" args="[entityName]" />
+								\${message(code:"${domainClass.propertyName}.list.label", default:'') ?: message(code:'default.list.label', args:[entityName])}
 							</g:link>
 						</li>
 						<li class="active">
 							<g:link class="create" action="create">
 								<span class="glyphicon glyphicon-plus"></span>
-								<g:message code="default.create.label" args="[entityName]" />
+								\${message(code:"${domainClass.propertyName}.create.label", default:'') ?: message(code:'default.create.label', args:[entityName])}
 							</g:link>
 						</li>
 					</ul>
@@ -33,7 +33,7 @@
 			<div class="col-md-9">
 
 				<div class="page-header">
-					<h1><g:message code="default.create.label" args="[entityName]" /></h1>
+					<h1>\${message(code:"${domainClass.propertyName}.create.label", default:'') ?: message(code:'default.create.label', args:[entityName])}</h1>
 				</div>
 
 				<g:if test="\${flash.message}">
@@ -54,7 +54,7 @@
 					<g:form class="form-horizontal" url="[resource:${propertyName}, action:'save']" <%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
 						<fieldset>
 					        <f:with bean="${propertyName}">
-						    <%  excludedProps = Event.allEvents.toList() << 'id' << 'version'
+						    <%  excludedProps = Event.allEvents.toList() << 'id' << 'version' << 'dateCreated' << 'lastUpdated'
             				    if (GCU.isStaticProperty(domainClass.clazz, 'views')) excludedProps += domainClass.clazz.views?.create?.excludes ?: []
             					allowedNames = domainClass.persistentProperties*.name << 'dateCreated' << 'lastUpdated'
 								boolean hasHibernate = pluginManager?.hasGrailsPlugin('hibernate') || pluginManager?.hasGrailsPlugin('hibernate4')
