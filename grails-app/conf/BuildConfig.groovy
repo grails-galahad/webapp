@@ -45,7 +45,7 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
-		build ":tomcat:7.0.52"
+		build ":tomcat:7.0.52.1"
 		
         compile ":scaffolding:2.0.2"
         compile ':cache:1.1.1'
@@ -54,14 +54,12 @@ grails.project.dependency.resolution = {
         compile(":heroku:1.0.1") {
             exclude 'database-session'
         }
-        compile(":cookie-session:2.0.13") {
-            // exclude 'asm'
-        }
+        compile(":cookie-session:2.0.13")
         compile ":console:1.3"
         compile ":mail:1.0.1"
         compile ":quartz:1.0.1"
 
-        runtime ":hibernate:3.6.10.8"
+        runtime ":hibernate:3.6.10.10"
         runtime ":database-migration:1.3.8"
         runtime ":jquery:1.11.0.2"
 		runtime ":jquery-ui:1.10.3"

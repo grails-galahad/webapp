@@ -27,11 +27,15 @@ grails.enable.native2ascii = true
 grails.spring.bean.packages = []
 grails.web.disable.multipart=false
 grails.exceptionresolver.params.exclude = ['password']
-grails.hibernate.cache.queries = false
 grails.views.default.codec = "html"
 grails.gorm.default.mapping = { sort 'id' }
 
 grails {
+	hibernate {
+		cache.queries = false
+		pass.readonly = false
+		osiv.readonly = false
+	}
 	resources {
 		adhoc {
 			patterns = []
@@ -106,7 +110,7 @@ grails {
 		username = "paulcitarella"
 		password = "JEg-I9BapHcYLT8gKesUiw"
 	}
-	mail.default.from = "info@enterprise-grails.com"
+	mail.default.from = "info@${appName}.com"
 }
 
 if (!(Environment.current in [Environment.DEVELOPMENT, Environment.TEST])) {
